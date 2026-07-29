@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/artifact-index.schema.json",
+  "title": "LAPE-26 Corpus Artifact Index",
+  "type": "object",
+  "required": ["artifactIndexVersion", "artifacts"],
+  "properties": {
+    "artifactIndexVersion": { "const": "artifact-index-v0.1" },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artifactId", "artifactVersion", "relativePath", "contentSha256",
+          "pipelineVersion", "normalizationProfile", "seed", "corpusLockSha256"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "artifactId": { "type": "string", "minLength": 1 },
+          "artifactVersion": { "type": "string" },
+          "relativePath": { "type": "string", "pattern": "^[^/].*[^/]$" },
+          "contentSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "pipelineVersion": { "const": "corpus-pipeline-v0.1" },
+          "normalizationProfile": { "const": "lape-text-normalization-v0.1" },
+          "seed": { "type": ["integer", "null"] },
+          "corpusLockSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
