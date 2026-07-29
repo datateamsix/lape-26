@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/mapping.schema.json",
+  "title": "LAPE-26 Mapping",
+  "type": "object",
+  "required": [
+    "mappingId",
+    "version",
+    "status",
+    "alphabet",
+    "tuning",
+    "range",
+    "letters"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "mappingId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "experimental",
+        "candidate",
+        "stable",
+        "deprecated"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "alphabet": {
+      "const": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    "description": {
+      "type": "string"
+    },
+    "normalizationProfile": {
+      "type": "string"
+    },
+    "tuning": {
+      "type": "object",
+      "required": [
+        "system",
+        "referencePitch",
+        "referenceMidi",
+        "referenceFrequencyHz"
+      ],
+      "properties": {
+        "system": {
+          "const": "12-TET"
+        },
+        "referencePitch": {
+          "const": "A4"
+        },
+        "referenceMidi": {
+          "const": 69
+        },
+        "referenceFrequencyHz": {
+          "const": 440
+        },
+        "frequencyFormula": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "range": {
+      "type": "object",
+      "required": [
+        "lowestMidi",
+        "highestMidi"
+      ],
+      "properties": {
+        "lowestPitch": {
+          "type": "string"
+        },
+        "lowestMidi": {
+          "type": "integer"
+        },
+        "highestPitch": {
+          "type": "string"
+        },
+        "highestMidi": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "letters": {
+      "type": "object",
+      "minProperties": 26,
+      "maxProperties": 26,
+      "required": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "patternProperties": {
+        "^[A-Z]$": {
+          "type": "object",
+          "required": [
+            "pitch",
+            "midi",
+            "frequencyHz"
+          ],
+          "properties": {
+            "pitch": {
+              "type": "string"
+            },
+            "midi": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 127
+            },
+            "frequencyHz": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,9 @@
+text,category
+hammer,common-word
+music,common-word
+language,abstract-word
+melody,music-word
+quiet,emotion-descriptor
+jazz,music-word
+Michael,first-name
+Mary,first-name

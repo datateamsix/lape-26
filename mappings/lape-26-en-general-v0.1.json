@@ -1,0 +1,161 @@
+{
+  "$schema": "./mapping.schema.json",
+  "mappingId": "lape-26-en-general-v0.1",
+  "name": "LAPE-26 English General Experimental Mapping",
+  "version": "0.1.0-experimental",
+  "status": "experimental",
+  "language": "en",
+  "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "description": "A fixed experimental assignment of 26 English letters to 26 unique 12-TET pitches from C3 through C#5.",
+  "tuning": {
+    "system": "12-TET",
+    "referencePitch": "A4",
+    "referenceMidi": 69,
+    "referenceFrequencyHz": 440.0,
+    "frequencyFormula": "f(m)=440*2^((m-69)/12)"
+  },
+  "range": {
+    "lowestPitch": "C3",
+    "lowestMidi": 48,
+    "highestPitch": "C#5",
+    "highestMidi": 73
+  },
+  "normalizationProfile": "lape-text-normalization-v0.1",
+  "notes": [
+    "This mapping is a prototype research hypothesis, not a permanent natural alphabet.",
+    "The mapping is deterministic: the same normalized text and mapping version produce the same pitch sequence.",
+    "Frequency values are rounded display values; implementations should calculate canonical frequencies from MIDI when precision matters."
+  ],
+  "letters": {
+    "A": {
+      "pitch": "C4",
+      "midi": 60,
+      "frequencyHz": 261.625565
+    },
+    "B": {
+      "pitch": "G#4",
+      "midi": 68,
+      "frequencyHz": 415.304698
+    },
+    "C": {
+      "pitch": "F4",
+      "midi": 65,
+      "frequencyHz": 349.228231
+    },
+    "D": {
+      "pitch": "C#4",
+      "midi": 61,
+      "frequencyHz": 277.182631
+    },
+    "E": {
+      "pitch": "E4",
+      "midi": 64,
+      "frequencyHz": 329.627557
+    },
+    "F": {
+      "pitch": "C3",
+      "midi": 48,
+      "frequencyHz": 130.812783
+    },
+    "G": {
+      "pitch": "F#4",
+      "midi": 66,
+      "frequencyHz": 369.994423
+    },
+    "H": {
+      "pitch": "A4",
+      "midi": 69,
+      "frequencyHz": 440.0
+    },
+    "I": {
+      "pitch": "G4",
+      "midi": 67,
+      "frequencyHz": 391.995436
+    },
+    "J": {
+      "pitch": "D#3",
+      "midi": 51,
+      "frequencyHz": 155.563492
+    },
+    "K": {
+      "pitch": "C5",
+      "midi": 72,
+      "frequencyHz": 523.251131
+    },
+    "L": {
+      "pitch": "G#3",
+      "midi": 56,
+      "frequencyHz": 207.652349
+    },
+    "M": {
+      "pitch": "D#4",
+      "midi": 63,
+      "frequencyHz": 311.126984
+    },
+    "N": {
+      "pitch": "A#3",
+      "midi": 58,
+      "frequencyHz": 233.081881
+    },
+    "O": {
+      "pitch": "G3",
+      "midi": 55,
+      "frequencyHz": 195.997718
+    },
+    "P": {
+      "pitch": "F#3",
+      "midi": 54,
+      "frequencyHz": 184.997211
+    },
+    "Q": {
+      "pitch": "E3",
+      "midi": 52,
+      "frequencyHz": 164.813778
+    },
+    "R": {
+      "pitch": "A3",
+      "midi": 57,
+      "frequencyHz": 220.0
+    },
+    "S": {
+      "pitch": "B3",
+      "midi": 59,
+      "frequencyHz": 246.941651
+    },
+    "T": {
+      "pitch": "D4",
+      "midi": 62,
+      "frequencyHz": 293.664768
+    },
+    "U": {
+      "pitch": "D3",
+      "midi": 50,
+      "frequencyHz": 146.832384
+    },
+    "V": {
+      "pitch": "C#3",
+      "midi": 49,
+      "frequencyHz": 138.591315
+    },
+    "W": {
+      "pitch": "F3",
+      "midi": 53,
+      "frequencyHz": 174.614116
+    },
+    "X": {
+      "pitch": "C#5",
+      "midi": 73,
+      "frequencyHz": 554.365262
+    },
+    "Y": {
+      "pitch": "B4",
+      "midi": 71,
+      "frequencyHz": 493.883301
+    },
+    "Z": {
+      "pitch": "A#4",
+      "midi": 70,
+      "frequencyHz": 466.163762
+    }
+  }
+}

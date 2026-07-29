@@ -1,0 +1,14 @@
+dataset_id: replace-me-001
+name: Replace Me
+version: "1.0"
+source_url: ""
+retrieved_at: "2026-07-29"
+license: "UNKNOWN"
+redistribution_allowed: false
+content_type: word-frequency
+language: en
+locale: general
+checksum_sha256: ""
+preparation_script: ""
+known_biases:
+  - "Document before use"

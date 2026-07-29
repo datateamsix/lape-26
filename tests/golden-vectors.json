@@ -1,0 +1,296 @@
+{
+  "version": "0.1",
+  "mappingVersion": "lape-26-en-general-v0.1",
+  "normalizationProfile": "lape-text-normalization-v0.1",
+  "cases": [
+    {
+      "id": "golden-001",
+      "input": "hammer",
+      "normalized": "HAMMER",
+      "midi": [
+        69,
+        60,
+        63,
+        63,
+        64,
+        57
+      ],
+      "pitches": [
+        "A4",
+        "C4",
+        "D#4",
+        "D#4",
+        "E4",
+        "A3"
+      ],
+      "intervals": [
+        -9,
+        3,
+        0,
+        1,
+        -7
+      ]
+    },
+    {
+      "id": "golden-002",
+      "input": "music",
+      "normalized": "MUSIC",
+      "midi": [
+        63,
+        50,
+        59,
+        67,
+        65
+      ],
+      "pitches": [
+        "D#4",
+        "D3",
+        "B3",
+        "G4",
+        "F4"
+      ],
+      "intervals": [
+        -13,
+        9,
+        8,
+        -2
+      ]
+    },
+    {
+      "id": "golden-003",
+      "input": "language",
+      "normalized": "LANGUAGE",
+      "midi": [
+        56,
+        60,
+        58,
+        66,
+        50,
+        60,
+        66,
+        64
+      ],
+      "pitches": [
+        "G#3",
+        "C4",
+        "A#3",
+        "F#4",
+        "D3",
+        "C4",
+        "F#4",
+        "E4"
+      ],
+      "intervals": [
+        4,
+        -2,
+        8,
+        -16,
+        10,
+        6,
+        -2
+      ]
+    },
+    {
+      "id": "golden-004",
+      "input": "melody",
+      "normalized": "MELODY",
+      "midi": [
+        63,
+        64,
+        56,
+        55,
+        61,
+        71
+      ],
+      "pitches": [
+        "D#4",
+        "E4",
+        "G#3",
+        "G3",
+        "C#4",
+        "B4"
+      ],
+      "intervals": [
+        1,
+        -8,
+        -1,
+        6,
+        10
+      ]
+    },
+    {
+      "id": "golden-005",
+      "input": "open-source",
+      "normalized": "OPENSOURCE",
+      "midi": [
+        55,
+        54,
+        64,
+        58,
+        59,
+        55,
+        50,
+        57,
+        65,
+        64
+      ],
+      "pitches": [
+        "G3",
+        "F#3",
+        "E4",
+        "A#3",
+        "B3",
+        "G3",
+        "D3",
+        "A3",
+        "F4",
+        "E4"
+      ],
+      "intervals": [
+        -1,
+        10,
+        -6,
+        1,
+        -4,
+        -5,
+        7,
+        8,
+        -1
+      ]
+    },
+    {
+      "id": "golden-006",
+      "input": "Mary",
+      "normalized": "MARY",
+      "midi": [
+        63,
+        60,
+        57,
+        71
+      ],
+      "pitches": [
+        "D#4",
+        "C4",
+        "A3",
+        "B4"
+      ],
+      "intervals": [
+        -3,
+        -3,
+        14
+      ]
+    },
+    {
+      "id": "golden-007",
+      "input": "Michael",
+      "normalized": "MICHAEL",
+      "midi": [
+        63,
+        67,
+        65,
+        69,
+        60,
+        64,
+        56
+      ],
+      "pitches": [
+        "D#4",
+        "G4",
+        "F4",
+        "A4",
+        "C4",
+        "E4",
+        "G#3"
+      ],
+      "intervals": [
+        4,
+        -2,
+        4,
+        -9,
+        4,
+        -8
+      ]
+    },
+    {
+      "id": "golden-008",
+      "input": "jazz",
+      "normalized": "JAZZ",
+      "midi": [
+        51,
+        60,
+        70,
+        70
+      ],
+      "pitches": [
+        "D#3",
+        "C4",
+        "A#4",
+        "A#4"
+      ],
+      "intervals": [
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "id": "golden-009",
+      "input": "quiet",
+      "normalized": "QUIET",
+      "midi": [
+        52,
+        50,
+        67,
+        64,
+        62
+      ],
+      "pitches": [
+        "E3",
+        "D3",
+        "G4",
+        "E4",
+        "D4"
+      ],
+      "intervals": [
+        -2,
+        17,
+        -3,
+        -2
+      ]
+    },
+    {
+      "id": "golden-010",
+      "input": "Café, don't!",
+      "normalized": "CAFEDONT",
+      "midi": [
+        65,
+        60,
+        48,
+        64,
+        61,
+        55,
+        58,
+        62
+      ],
+      "pitches": [
+        "F4",
+        "C4",
+        "C3",
+        "E4",
+        "C#4",
+        "G3",
+        "A#3",
+        "D4"
+      ],
+      "intervals": [
+        -5,
+        -12,
+        16,
+        -3,
+        -6,
+        3,
+        4
+      ]
+    }
+  ]
+}

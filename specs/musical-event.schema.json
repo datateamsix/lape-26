@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LAPE-26 Musical Letter Event",
+  "type": "object",
+  "required": [
+    "sourceCharacter",
+    "normalizedCharacter",
+    "sourceIndex",
+    "normalizedIndex",
+    "pitch",
+    "midi",
+    "frequencyHz",
+    "mappingVersion",
+    "normalizationProfile"
+  ],
+  "properties": {
+    "sourceCharacter": {
+      "type": "string"
+    },
+    "normalizedCharacter": {
+      "type": "string",
+      "pattern": "^[A-Z]$"
+    },
+    "sourceIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "normalizedIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "pitch": {
+      "type": "string"
+    },
+    "midi": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 127
+    },
+    "frequencyHz": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "startBeat": {
+      "type": "number",
+      "minimum": 0
+    },
+    "durationBeats": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "velocity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "mappingVersion": {
+      "type": "string"
+    },
+    "normalizationProfile": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

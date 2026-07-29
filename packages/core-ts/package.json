@@ -1,0 +1,7 @@
+{
+  "name": "@lape-26/core",
+  "version": "0.1.0-experimental",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free TypeScript reference encoder for LAPE-26"
+}

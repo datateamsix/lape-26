@@ -1,0 +1,13 @@
+{
+  "experimentId": "example-evaluation-001",
+  "mappingId": "lape-26-en-general-v0.1",
+  "datasets": [
+    "data/fixtures/pilot-words.csv"
+  ],
+  "metrics": [
+    "register_center_v0.1",
+    "pitch_span_v0.1",
+    "interval_contour_v0.1"
+  ],
+  "seed": 26
+}
