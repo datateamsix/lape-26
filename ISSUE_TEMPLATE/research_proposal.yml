@@ -1,0 +1,25 @@
+name: Research proposal
+description: Propose a metric, dataset, control, experiment, or mapping study
+title: "[Research]: "
+labels: ["research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed method
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, data, and licenses
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations and likely confounds

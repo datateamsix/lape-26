@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate mapping
+        run: python3 scripts/validate_mapping.py
+
+      - name: Check Word Explorer mapping
+        run: python3 scripts/check_word_explorer_mapping.py
+
+      - name: Run Python tests
+        run: PYTHONPATH=python python3 -m unittest discover -s python/tests -v
+
+      - name: Run TypeScript tests
+        run: node --experimental-strip-types --test packages/core-ts/test/core.test.ts
+
+      - name: Check Python/TypeScript parity
+        run: node --experimental-strip-types scripts/check_cross_runtime.ts
