@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: LAPE-26
+type: software
+message: "If you use LAPE-26 in research, art, software, or teaching, please cite this repository and the exact mapping version."
+authors:
+  - family-names: deVry
+    given-names: Michael
+version: 0.1.0-experimental
+date-released: 2026-07-29
+license: Apache-2.0
+abstract: "An open-source creative research project intended to explore the musicality of language through deterministic mappings between written letters and musical pitches."
+keywords:
+  - music
+  - language
+  - creative coding
+  - text-to-music
+  - computational creativity
+  - music information research
+repository-code: "https://github.com/REPLACE-ME/lape-26"

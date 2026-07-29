@@ -1,0 +1,39 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+coverage/
+
+# Data and experiments
+data/restricted/**
+!data/restricted/.gitkeep
+data/raw/**
+!data/raw/.gitkeep
+experiments/runs/**
+!experiments/runs/.gitkeep
+
+# Local study exports
+apps/listener-study/exports/
+
+# Environment
+.env
+.env.*
+!.env.example

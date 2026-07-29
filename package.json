@@ -1,0 +1,21 @@
+{
+  "name": "lape-26",
+  "version": "0.1.0-experimental",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "validate": "python3 scripts/validate_mapping.py",
+    "test:python": "PYTHONPATH=python python3 -m unittest discover -s python/tests -v",
+    "test:ts": "node --experimental-strip-types --test packages/core-ts/test/core.test.ts",
+    "test:parity": "node --experimental-strip-types scripts/check_cross_runtime.ts",
+    "test": "npm run validate && npm run test:explorer && npm run test:python && npm run test:ts && npm run test:parity",
+    "test:explorer": "python3 scripts/check_word_explorer_mapping.py"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "Apache-2.0"
+}
