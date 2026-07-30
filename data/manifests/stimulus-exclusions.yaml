@@ -118,3 +118,12 @@ excluded_words:
   # gender-based social structure; same sensitive-content domain as
   # the already-excluded MISOGYNIC.
   - PATRIARCHAL
+  # Refers specifically to the Jewish ritual circumcision ceremony; a
+  # culturally/religiously specific term tied to a sensitive
+  # religious/medical practice.
+  - BRISS
+  # Historically and often still used as a pejorative criticizing men's
+  # gender expression; same charged-content domain as MISOGYNIC/PATRIARCHAL.
+  - EFFEMINATE
+  # Taxonomic-genus-derived term (Bacteroides).
+  - BACTEROIDAL
