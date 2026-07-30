@@ -74,6 +74,20 @@ class ProvenanceBlockTests(unittest.TestCase):
         # the case this scoping exists to handle — see Task 23).
         self.assertFalse(git_is_dirty(["this/path/has/never/existed.txt"]))
 
+    def test_semantic_content_sha256_ignores_volatile_provenance_fields(self) -> None:
+        from lape26.corpus.provenance import semantic_content_sha256
+
+        a = {"x": 1, "provenance": {"pipeline_source_commit": "aaa", "working_tree_dirty": False, "y": "z"}}
+        b = {"x": 1, "provenance": {"pipeline_source_commit": "bbb", "working_tree_dirty": True, "y": "z"}}
+        self.assertEqual(semantic_content_sha256(a), semantic_content_sha256(b))
+
+    def test_semantic_content_sha256_detects_real_content_drift(self) -> None:
+        from lape26.corpus.provenance import semantic_content_sha256
+
+        a = {"x": 1, "provenance": {"pipeline_source_commit": "aaa", "working_tree_dirty": False}}
+        b = {"x": 2, "provenance": {"pipeline_source_commit": "aaa", "working_tree_dirty": False}}
+        self.assertNotEqual(semantic_content_sha256(a), semantic_content_sha256(b))
+
 
 if __name__ == "__main__":
     unittest.main()

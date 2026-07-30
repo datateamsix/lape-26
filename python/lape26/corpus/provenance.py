@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import copy
 import hashlib
+import json
 import subprocess
 from pathlib import Path
 
@@ -93,3 +95,25 @@ def build_provenance_block(
         "source_tree_digest": source_tree_digest(pipeline_source_paths),
         "input_data_sha256": input_data_digest(input_data_paths),
     }
+
+
+_VOLATILE_PROVENANCE_FIELDS = ("pipeline_source_commit", "working_tree_dirty")
+
+
+def semantic_content_bytes(payload: dict[str, object]) -> bytes:
+    """Canonical JSON bytes for `payload` with volatile provenance fields
+    (pipeline_source_commit, working_tree_dirty) stripped, so semantically
+    identical artifacts hash the same even when generated at different
+    times or from a dirty tree. Used for artifact-index checksums and
+    corpus-check's drift comparison.
+    """
+    normalized = copy.deepcopy(payload)
+    provenance = normalized.get("provenance")
+    if isinstance(provenance, dict):
+        for field in _VOLATILE_PROVENANCE_FIELDS:
+            provenance.pop(field, None)
+    return json.dumps(normalized, sort_keys=True, ensure_ascii=False).encode("utf-8")
+
+
+def semantic_content_sha256(payload: dict[str, object]) -> str:
+    return hashlib.sha256(semantic_content_bytes(payload)).hexdigest()
