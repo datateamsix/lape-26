@@ -1,0 +1,4 @@
+# Words to exclude from pilot stimulus candidate generation, keyed by
+# manual review (Task 23). Populate only after finding a real problem in
+# a generated fixture — do not pre-populate speculatively.
+excluded_words: []
