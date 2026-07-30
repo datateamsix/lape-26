@@ -191,9 +191,15 @@ def run_pipeline(
 
     used_words: set[str] = set()
     used_stems: set[str] = set()
-    core_set = select_core_set(word_candidates, seed=seed, used_words=used_words, used_stems=used_stems)
+    train_word_set = set(word_split.train)
+    training_candidates = [c for c in word_candidates if c.word.upper() in train_word_set]
+    training_orthographic_candidates = {
+        category: [w for w in words if w in train_word_set]
+        for category, words in orthographic_candidates_by_category.items()
+    }
+    core_set = select_core_set(training_candidates, seed=seed, used_words=used_words, used_stems=used_stems)
     orthographic_set = select_orthographic_challenge_set(
-        orthographic_candidates_by_category, seed=seed, used_words=used_words,
+        training_orthographic_candidates, seed=seed, used_words=used_words,
     )
 
     core_set_items = [

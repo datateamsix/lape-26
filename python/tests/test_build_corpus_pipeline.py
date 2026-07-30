@@ -24,7 +24,12 @@ def _synthetic_word_candidates(count_per_cell: int = 25) -> list[WordCandidate]:
     for band in _BANDS:
         for polarity in _POLARITIES:
             for i in range(count_per_cell):
-                word = f"{band[:2]}{polarity[:2]}{i:02d}".upper()
+                # polarity[:2] collides ("negative"/"neutral" both -> "ne"),
+                # which would give the negative and neutral cells within a
+                # band identical word strings and defeat cell separation
+                # once used_words/used_stems exclusion is in play; [:3] is
+                # unique across all three polarities ("pos"/"neg"/"neu").
+                word = f"{band[:2]}{polarity[:3]}{i:02d}".upper()
                 candidates.append(
                     WordCandidate(
                         word=word,
@@ -39,19 +44,50 @@ def _synthetic_word_candidates(count_per_cell: int = 25) -> list[WordCandidate]:
     return candidates
 
 
-def _synthetic_orthographic_candidates() -> dict[str, list[str]]:
-    # Deliberately includes words that also appear as core-set candidates'
-    # *word-string prefixes* is NOT the concern here — these are entirely
-    # separate strings, so no overlap with the core set is possible by
-    # construction; overlap-prevention itself is exercised directly in
-    # Task 12's test_corpus_stimulus.py. Here we just need enough distinct
-    # candidates to satisfy 4 categories x 3 items.
-    return {
-        "repeated-letters": ["BALLOON", "ANNOUNCE", "COMMITTEE", "MISSISSIPPI"],
-        "rare-letters": ["JAZZ", "QUIZ", "WALTZ", "XYLOPHONE"],
-        "vowel-heavy": ["AI", "AREA", "IDEA", "QUEUE"],
-        "consonant-heavy": ["STRENGTH", "RHYTHM", "GLYPH", "NYMPH"],
-    }
+_ORTHOGRAPHIC_BASE_WORDS = {
+    "repeated-letters": ["BALLOON", "ANNOUNCE", "COMMITTEE", "MISSISSIPPI"],
+    "rare-letters": ["JAZZ", "QUIZ", "WALTZ", "XYLOPHONE"],
+    "vowel-heavy": ["AI", "AREA", "IDEA", "QUEUE"],
+    "consonant-heavy": ["STRENGTH", "RHYTHM", "GLYPH", "NYMPH"],
+}
+
+
+def _synthetic_orthographic_candidates(count_per_category: int = 12) -> dict[str, list[str]]:
+    # run_pipeline filters orthographic candidates to the training word-list
+    # partition before selection (leakage prevention), so each category
+    # needs enough members for >=3 to survive an ~80% keep rate. Padded
+    # beyond the 4 illustrative base words per category with synthetic
+    # fillers; overlap-prevention against the core set is exercised
+    # directly in Task 12's test_corpus_stimulus.py, not here.
+    candidates: dict[str, list[str]] = {}
+    for category, base_words in _ORTHOGRAPHIC_BASE_WORDS.items():
+        prefix = "".join(part[0] for part in category.split("-")).upper()
+        filler = [f"{prefix}SYN{i:02d}" for i in range(max(count_per_category - len(base_words), 0))]
+        candidates[category] = base_words + filler
+    return candidates
+
+
+def _orthographic_membership_candidates() -> list[WordCandidate]:
+    # Phantom WordCandidate entries so the orthographic words above are
+    # members of word_candidates (and therefore eligible for word_split's
+    # train/validation/holdout partitioning), without ever being eligible
+    # for core-set selection: length=20 falls outside every length_band,
+    # so length_band() returns None and select_core_set skips them.
+    candidates: list[WordCandidate] = []
+    for category, words in _synthetic_orthographic_candidates().items():
+        for word in words:
+            candidates.append(
+                WordCandidate(
+                    word=word,
+                    length=20,
+                    partOfSpeech="noun",
+                    polarity="neutral",
+                    vaderCompound=0.0,
+                    sourceDataset="synthetic-orthographic-membership",
+                    stemKey=f"phantom-{word}",
+                )
+            )
+    return candidates
 
 
 def _synthetic_gutenberg_documents() -> dict[str, list[list[str]]]:
@@ -68,7 +104,7 @@ def _run(base: Path, corpus_lock_path: Path | None = None) -> dict[str, Path]:
         lock_path.write_text(json.dumps({"packages": []}), encoding="utf-8")
     return run_pipeline(
         gutenberg_sentences_by_document=_synthetic_gutenberg_documents(),
-        word_candidates=_synthetic_word_candidates(),
+        word_candidates=_synthetic_word_candidates() + _orthographic_membership_candidates(),
         orthographic_candidates_by_category=_synthetic_orthographic_candidates(),
         seed=26,
         processed_dir=base / "processed",
