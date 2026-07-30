@@ -28,3 +28,5 @@ excluded_words:
   - AVELLAN
   # Direct violence/weapon connotation ("to bayonet" = stab with a bayonet).
   - BAYONETED
+  # Proper-noun-derived adjective (from composer Richard Wagner).
+  - WAGNERIAN
