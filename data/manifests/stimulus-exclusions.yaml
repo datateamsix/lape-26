@@ -26,3 +26,5 @@ excluded_words:
   - MISOGYNIC
   # Highly obscure heraldic term, essentially unknown outside heraldry.
   - AVELLAN
+  # Direct violence/weapon connotation ("to bayonet" = stab with a bayonet).
+  - BAYONETED
