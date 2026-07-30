@@ -7,6 +7,8 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
 
+from .normalize import normalize_text
+
 DEFAULT_MAPPING_PATH = Path(__file__).resolve().parents[2] / "mappings" / "lape-26-en-general-v0.1.json"
 
 
@@ -30,11 +32,6 @@ def midi_to_frequency(midi: int, reference_hz: float = 440.0) -> float:
     if not 0 <= midi <= 127:
         raise ValueError("MIDI pitch must be between 0 and 127")
     return reference_hz * (2.0 ** ((midi - 69) / 12.0))
-
-
-def normalize_text(text: str) -> str:
-    decomposed = unicodedata.normalize("NFKD", text)
-    return "".join(ch for ch in decomposed.upper() if "A" <= ch <= "Z")
 
 
 def load_mapping(path: str | Path = DEFAULT_MAPPING_PATH) -> dict[str, Any]:
