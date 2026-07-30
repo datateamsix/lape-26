@@ -141,3 +141,10 @@ excluded_words:
   # often fatal disease); potentially distressing as a generic stimulus
   # word regardless of its standing as ordinary vocabulary.
   - CANCER
+  # Explicit sexual-act term; inappropriate stimulus content.
+  - CUNNILINCTUS
+  # Proper noun (major European river); slipped through the automated
+  # proper-noun filter (rivers are not always tagged noun.location in
+  # WordNet the way cities/states are) — known filter gap, caught by
+  # manual review.
+  - DANUBE
