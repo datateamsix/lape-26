@@ -164,3 +164,13 @@ excluded_words:
   # office), same institutional-specificity category as
   # MASONIC/PANHELLENIC.
   - PAPAL
+  # Direct sexual-abuse connotation, same severe category as
+  # PEDOPHILIA/GROPINGLY.
+  - MOLEST
+  - MOLESTATION
+  # Explicit anatomical/medical term, same category as CUNNILINCTUS.
+  - MICROPHALLUS
+  # Common personal name (given name), same category as ANNA/REID/MURPHY.
+  - ANGELIQUE
+  # Taxonomic genus name (flowering plant); filter gap similar to DANUBE.
+  - CHAENACTIS
