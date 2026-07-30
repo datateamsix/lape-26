@@ -5,6 +5,8 @@ import unittest
 from pathlib import Path
 
 from lape26.corpus.nltk_adapter import (
+    _is_proper_noun_like,
+    _is_taxonomic_name_like,
     configure_nltk_data_path,
     split_sentences,
     split_words,
@@ -15,6 +17,7 @@ from lape26.corpus.tokens import tokenize_sentences
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURE_PATH = ROOT / "python" / "tests" / "fixtures" / "tiny-corpus-sample.txt"
+DOWNLOAD_DIR = ROOT / "data" / "raw" / "nltk_data"
 
 
 class SplitSentencesTests(unittest.TestCase):
@@ -56,6 +59,79 @@ class TokenizeRawTextAndFixtureTests(unittest.TestCase):
         self.assertGreater(stats.wordCount, 0)
         self.assertGreater(stats.sentenceCount, 0)
         self.assertIn("C", stats.characterFrequency)  # from "cat"
+
+
+def _wordnet_available() -> bool:
+    try:
+        configure_nltk_data_path(DOWNLOAD_DIR)
+        from nltk.corpus import wordnet
+
+        wordnet.synsets("test")
+        return True
+    except LookupError:
+        return False
+
+
+@unittest.skipUnless(
+    _wordnet_available(), "requires local NLTK wordnet data (run `make corpus-setup` first) — CI is network-free"
+)
+class ProperNounAndTaxonomicFilterTests(unittest.TestCase):
+    """Covers the stimulus-candidate proper-noun/taxonomic-name filters
+    added after manual Task 23 review repeatedly found NLTK's `words`
+    corpus and WordNet's neutral-polarity/orthographic candidates
+    contaminated with surnames, place names, and taxonomic Latin
+    classification terms (e.g. "reid", "arizona", "reptilia") — see
+    data/manifests/stimulus-exclusions.yaml for the manually-found cases
+    this is meant to catch automatically going forward.
+    """
+
+    def setUp(self) -> None:
+        configure_nltk_data_path(DOWNLOAD_DIR)
+        from nltk.corpus import wordnet
+
+        self.wordnet = wordnet
+
+    def _synsets(self, word: str) -> list:
+        return self.wordnet.synsets(word)
+
+    def test_proper_nouns_are_filtered(self) -> None:
+        for word in ("arizona", "jerusalem", "reid", "yellowknife", "china", "turkey", "victor"):
+            with self.subTest(word=word):
+                self.assertTrue(_is_proper_noun_like(self._synsets(word)), f"{word!r} should be proper-noun-like")
+
+    def test_taxonomic_names_are_filtered(self) -> None:
+        for word in ("reptilia", "triopidae", "crassula", "myroxylon", "periploca", "syzygium", "erethizontidae"):
+            with self.subTest(word=word):
+                self.assertTrue(
+                    _is_taxonomic_name_like(self._synsets(word)), f"{word!r} should be taxonomic-name-like"
+                )
+
+    def test_ordinary_species_common_nouns_are_not_taxonomic(self) -> None:
+        # Species common nouns route through animal/organism/vertebrate,
+        # not through genus/family/class-level classification lemmas.
+        for word in ("manatee", "natterjack", "skunk"):
+            with self.subTest(word=word):
+                self.assertFalse(_is_taxonomic_name_like(self._synsets(word)), f"{word!r} should not be taxonomic")
+
+    def test_most_ordinary_words_are_not_flagged_proper_noun(self) -> None:
+        for word in ("happy", "sad", "warm", "joy", "honor", "faith", "flank", "cheese", "mossy"):
+            with self.subTest(word=word):
+                self.assertFalse(_is_proper_noun_like(self._synsets(word)), f"{word!r} should not be proper-noun-like")
+
+    def test_known_accepted_false_positives_documented(self) -> None:
+        # "love"/"skunk" each carry one incidental noun.person WordNet
+        # sense (a term of endearment; an informal insult) alongside their
+        # dominant senses. The proper-noun filter checks ANY sense rather
+        # than the dominant one, so it also excludes these from stimulus
+        # candidacy. This is an accepted, deliberate trade-off (see
+        # _is_proper_noun_like's docstring): manual review remains the
+        # real safety net, so under-filtering (missing a genuine proper
+        # noun) is worse than over-filtering (losing a good word from
+        # candidacy). This test exists so that trade-off is visible and
+        # intentional, not a silent surprise if WordNet data changes.
+        for word in ("love", "skunk"):
+            with self.subTest(word=word):
+                self.assertTrue(_is_proper_noun_like(self._synsets(word)))
 
 
 class ConfigureNltkDataPathTests(unittest.TestCase):

@@ -13,6 +13,42 @@ _WORD_PATTERN = re.compile(r"[A-Za-z']+")
 _POS_NAMES = {"n": "noun", "v": "verb", "a": "adjective", "s": "adjective", "r": "adverb"}
 _POLARITY_CONFIRM_THRESHOLD = 0.05
 
+_PROPER_NOUN_LEXNAMES = {"noun.person", "noun.location"}
+_TAXONOMIC_HYPERNYM_LEMMAS = {
+    "taxonomic_group", "biological_group", "genus", "family", "order", "class", "phylum", "kingdom",
+}
+
+
+def _is_proper_noun_like(synsets: list) -> bool:
+    """True if any sense of the word is a WordNet noun.person/noun.location
+    synset (surnames, place names) — e.g. "reid", "arizona", "jerusalem".
+    Deliberately checks ANY sense rather than requiring ALL senses to be
+    proper-noun-like: words with exactly one WordNet sense that happens to
+    be a name (the common case for surnames/places) are caught reliably;
+    the rare cost is over-excluding a handful of common words that also
+    have an incidental person/location sense (e.g. "skunk" also has an
+    informal noun.person sense as an insult) — an acceptable trade-off
+    given this filter exists to reduce, not eliminate, the need for manual
+    stimulus review, and a narrower candidate pool is a safe failure mode.
+    """
+    return any(s.lexname() in _PROPER_NOUN_LEXNAMES for s in synsets)
+
+
+def _is_taxonomic_name_like(synsets: list) -> bool:
+    """True if any sense's hypernym closure includes a taxonomic
+    classification lemma (genus/family/order/class/etc.) — catches
+    scientific Latin names used directly as English words (e.g.
+    "reptilia", "crassula", "triopidae"). Ordinary species common nouns
+    (e.g. "manatee", "skunk") have hypernym chains through
+    animal/organism/vertebrate but not through these classification-level
+    lemmas, so they are not affected.
+    """
+    for synset in synsets:
+        for path in synset.hypernym_paths():
+            if any(hypernym.lemma_names()[0].lower() in _TAXONOMIC_HYPERNYM_LEMMAS for hypernym in path):
+                return True
+    return False
+
 
 def configure_nltk_data_path(download_dir: Path) -> None:
     import nltk
@@ -88,7 +124,7 @@ def load_word_candidates(download_dir: Path, exclusions_path: Path) -> list["Wor
         seen_words.add(word)
 
         synsets = wordnet.synsets(word)
-        if not synsets:
+        if not synsets or _is_proper_noun_like(synsets) or _is_taxonomic_name_like(synsets):
             continue
 
         part_of_speech = _POS_NAMES.get(synsets[0].pos(), "other")
@@ -126,6 +162,7 @@ def load_word_candidates(download_dir: Path, exclusions_path: Path) -> list["Wor
 
 def load_orthographic_candidates(download_dir: Path, exclusions_path: Path) -> dict[str, list[str]]:
     configure_nltk_data_path(download_dir)
+    from nltk.corpus import wordnet
     from nltk.corpus import words as words_corpus
 
     from .stimulus import has_rare_letters, has_repeated_letters, is_consonant_heavy, is_vowel_heavy
@@ -140,6 +177,9 @@ def load_orthographic_candidates(download_dir: Path, exclusions_path: Path) -> d
         if not word.isalpha() or len(word) < 3 or word in seen or word.upper() in excluded_words:
             continue
         seen.add(word)
+        synsets = wordnet.synsets(word)
+        if not synsets or _is_proper_noun_like(synsets) or _is_taxonomic_name_like(synsets):
+            continue
         if has_repeated_letters(word):
             candidates["repeated-letters"].append(word.upper())
         if has_rare_letters(word):
