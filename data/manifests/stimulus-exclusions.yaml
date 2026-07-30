@@ -80,3 +80,16 @@ excluded_words:
   # Highly obscure formal/Latin-derived word, essentially unknown outside
   # specialist usage.
   - UXORIAL
+  # Mythological/legendary proper noun (the magic horse of Carolingian
+  # romance) and a famous historical knight's name.
+  - BAYARD
+  # Proper-noun-derived adjective (from the Sadducees, a specific
+  # historical religious/political sect).
+  - SADDUCEAN
+  # Taxonomic-family-derived term (Asclepiadaceae, milkweed family).
+  - ASCLEPIADACEOUS
+  # Describes graphic bodily violence.
+  - DISMEMBER
+  # Close morphological/semantic variant of POISONOUS (same root); keeping
+  # POISONOUS, excluding POISONOUSLY.
+  - POISONOUSLY
