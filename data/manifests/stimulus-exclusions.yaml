@@ -148,3 +148,7 @@ excluded_words:
   # WordNet the way cities/states are) — known filter gap, caught by
   # manual review.
   - DANUBE
+  # Proper-noun-derived adjective (from the Elysian Fields of Greek
+  # mythology); missed alongside WOKE in round 14's review, same
+  # category already excluded for WAGNERIAN/SADDUCEAN/LIVONIAN.
+  - ELYSIAN
