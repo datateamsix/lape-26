@@ -93,3 +93,18 @@ excluded_words:
   # Close morphological/semantic variant of POISONOUS (same root); keeping
   # POISONOUS, excluding POISONOUSLY.
   - POISONOUSLY
+  # Proper noun (US state name).
+  - ARIZONA
+  # Taxonomic proper noun itself (Family Equisetaceae, horsetail plants).
+  - EQUISETACEAE
+  # Proper-noun/ethnonym-derived adjective (Livonia, a historical Baltic
+  # region, and/or the Livonian people).
+  - LIVONIAN
+  # Overwhelmingly recognized as a common surname (Murphy's Law).
+  - MURPHY
+  # Close morphological/semantic variant of APPRECIATE (same root); keeping
+  # APPRECIATE, excluding APPRECIATIVE.
+  - APPRECIATIVE
+  # Highly obscure historical unit of measurement, essentially unknown
+  # outside old chemistry texts.
+  - CRITH
