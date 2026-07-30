@@ -63,3 +63,20 @@ excluded_words:
   # Historical clinical-term origin (used to classify intellectual
   # disability); excluded for caution despite common informal usage.
   - IDIOTIC
+  # Proper noun (capital city of Canada's Northwest Territories).
+  - YELLOWKNIFE
+  # Taxonomic proper noun (Genus Periploca, silkvine).
+  - PERIPLOCA
+  # Abbreviation/acronym ("First In, First Out"), not an organic word.
+  - FIFO
+  # Names a Native American language family (Kiowa-Tanoan, Pueblo peoples);
+  # proper-noun-adjacent, tied to a specific indigenous identity.
+  - TANOAN
+  # Violent/graphic connotation.
+  - BLOODY
+  # Close morphological/semantic variant of JOYOUSLY (same "joy" root);
+  # keeping JOYOUSLY, excluding JOYFULLY.
+  - JOYFULLY
+  # Highly obscure formal/Latin-derived word, essentially unknown outside
+  # specialist usage.
+  - UXORIAL
