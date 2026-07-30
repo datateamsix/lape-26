@@ -154,3 +154,13 @@ excluded_words:
   - ELYSIAN
   # Direct violence/death term.
   - KILL
+  # Unambiguous common personal name (given name).
+  - ANNA
+  # Charged term most commonly invoked in concerning contexts (e.g.
+  # sexualization of minors); similar severity register to
+  # PEDOPHILIA/GROPINGLY.
+  - SEXUALIZE
+  # Proper-noun-adjacent (derived from "Pope," a specific religious
+  # office), same institutional-specificity category as
+  # MASONIC/PANHELLENIC.
+  - PAPAL
