@@ -1,4 +1,5 @@
-.PHONY: test validate test-explorer test-python test-ts test-parity
+.PHONY: test validate test-explorer test-python test-ts test-parity \
+        corpus-setup corpus-lock corpus-relock corpus-pipeline corpus-check corpus-provenance-check
 
 test: validate test-explorer test-python test-ts test-parity
 
@@ -16,3 +17,21 @@ test-ts:
 
 test-parity:
 	node --experimental-strip-types scripts/check_cross_runtime.ts
+
+corpus-setup:
+	python3 scripts/setup_corpus.py setup
+
+corpus-lock:
+	python3 scripts/setup_corpus.py lock
+
+corpus-relock:
+	python3 scripts/setup_corpus.py relock
+
+corpus-pipeline:
+	python3 scripts/build_corpus_pipeline.py
+
+corpus-check:
+	python3 scripts/check_corpus_pipeline.py
+
+corpus-provenance-check:
+	python3 scripts/check_corpus_provenance.py
