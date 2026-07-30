@@ -152,3 +152,5 @@ excluded_words:
   # mythology); missed alongside WOKE in round 14's review, same
   # category already excluded for WAGNERIAN/SADDUCEAN/LIVONIAN.
   - ELYSIAN
+  # Direct violence/death term.
+  - KILL
