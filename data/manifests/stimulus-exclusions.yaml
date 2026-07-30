@@ -127,3 +127,17 @@ excluded_words:
   - EFFEMINATE
   # Taxonomic-genus-derived term (Bacteroides).
   - BACTEROIDAL
+  # Proper noun (major city with religious/geopolitical significance).
+  - JERUSALEM
+  # Proper noun (common surname).
+  - REID
+  # Ethnonym (Native American language family/people, Oregon).
+  - KALAPOOIAN
+  # Taxonomic classification name (tetrapod clade Amniota).
+  - AMNIOTA
+  # Place-name/proper-noun-adjacent (multiple place associations).
+  - LAKELAND
+  # Carries substantial real-world personal/medical weight (serious,
+  # often fatal disease); potentially distressing as a generic stimulus
+  # word regardless of its standing as ordinary vocabulary.
+  - CANCER
