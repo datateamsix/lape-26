@@ -1,4 +1,14 @@
 # Words to exclude from pilot stimulus candidate generation, keyed by
 # manual review (Task 23). Populate only after finding a real problem in
 # a generated fixture — do not pre-populate speculatively.
-excluded_words: []
+excluded_words:
+  # Clinical term for a paraphilic disorder; inappropriate stimulus content.
+  - PEDOPHILIA
+  # Proper noun (mythological figure / constellation name).
+  - PEGASUS
+  # Taxonomic proper noun (Class Reptilia).
+  - REPTILIA
+  # Taxonomic proper noun (Family Triopidae, tadpole shrimp).
+  - TRIOPIDAE
+  # Taxonomic proper noun (Genus Elsholtzia, mint-family plant).
+  - ELSHOLTZIA
