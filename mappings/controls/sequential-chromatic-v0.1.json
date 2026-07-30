@@ -138,15 +138,15 @@
   "mappingId": "sequential-chromatic-v0.1",
   "normalizationProfile": "lape-text-normalization-v0.1",
   "provenance": {
-    "input_data_sha256": "cc18455ec841337fef66382e0dcbbe204c24bf0c0cf9994708d8b4ec3aeda7b6",
+    "input_data_sha256": "915211ba8768d150d8a6df93af7b9b39c200c6b3c30cb55924a9908d87a2811f",
     "normalization_committed_blob_sha": "6f1fb75df014d1da43d9412c6c0db0fbb5a3e455",
     "normalization_implementation": "python/lape26/normalize.py",
     "normalization_live_sha256": "9283c3cb1286d1c80d566948422d0ae7a8d6c66ed69b7b52794ba2c9f89d06d5",
     "normalization_profile_id": "lape-text-normalization-v0.1",
     "normalization_spec_path": "specs/text-normalization.md",
     "normalization_status": "provisional-frozen",
-    "pipeline_source_commit": "632065ba3d6f8ceb3df4c05bb656982e50afc65b",
-    "source_tree_digest": "22214d445f9224eca4cac7ed97283f8b7256c7218c0e39db784aea568c0de718",
+    "pipeline_source_commit": "f15d789d85e96163e6e1c14d690f6e2280049521",
+    "source_tree_digest": "71f3ff3c879d0e04787fa46ada54776fe41da75bec1e08c160846dc83f6a57aa",
     "working_tree_dirty": false
   },
   "range": {
