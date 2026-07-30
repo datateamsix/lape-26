@@ -174,3 +174,14 @@ excluded_words:
   - ANGELIQUE
   # Taxonomic genus name (flowering plant); filter gap similar to DANUBE.
   - CHAENACTIS
+  # Explicit sexual/legal term with significant historical baggage, same
+  # severity category as CUNNILINCTUS/MICROPHALLUS.
+  - SODOMY
+  # Taxonomic genus name (flowering shrub); another filter gap.
+  - CARAGANA
+  # Direct violence/death connotation, same category as
+  # KILL/STAB/DISMEMBER/BAYONETED.
+  - MURDEROUS
+  # Historical ethnonym/civilization-derived adjective (ancient
+  # Carthage), same category as SADDUCEAN/TANOAN/LIVONIAN.
+  - PUNIC
