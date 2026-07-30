@@ -1,0 +1,1043 @@
+{
+  "artifactId": "pilot-stimulus-v0.1",
+  "artifactVersion": "0.1.0",
+  "coreSet": [
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5574,
+      "word": "ADORE"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5423,
+      "word": "AMAZE"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.3612,
+      "word": "EASE"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4588,
+      "word": "EXCEL"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.6249,
+      "word": "GREAT"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5719,
+      "word": "HAPPY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5106,
+      "word": "JOLLY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5859,
+      "word": "LOVER"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5423,
+      "word": "MERRY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4019,
+      "word": "NIFTY"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5267,
+      "word": "SEXY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.3612,
+      "word": "THANK"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4767,
+      "word": "BADLY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3818,
+      "word": "JADED"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3612,
+      "word": "LAZY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4019,
+      "word": "MADLY"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.1531,
+      "word": "MISS"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4215,
+      "word": "MOURN"
+    },
+    {
+      "length": 3,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3182,
+      "word": "ODD"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4588,
+      "word": "RUDE"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.5106,
+      "word": "SICK"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4215,
+      "word": "SNUB"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.0772,
+      "word": "SORRY"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.296,
+      "word": "WORN"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "ABACK"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "AIRT"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "APTLY"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "BOTH"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "COLLY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "COYLY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "ETHER"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "GUESS"
+    },
+    {
+      "length": 4,
+      "lengthBand": "short",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "LIMN"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "PUDGY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "ROWDY"
+    },
+    {
+      "length": 5,
+      "lengthBand": "short",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "SAUCY"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.2263,
+      "word": "ADEQUATE"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.25,
+      "word": "ADVANCED"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4939,
+      "word": "BLESSING"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4588,
+      "word": "CLEVER"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5994,
+      "word": "DELIGHT"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.34,
+      "word": "GLADLY"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4404,
+      "word": "NICELY"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4404,
+      "word": "RICHLY"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4215,
+      "word": "SPARKLE"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.3182,
+      "word": "SPIRITED"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.0516,
+      "word": "TRANQUIL"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4019,
+      "word": "TRUSTING"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4588,
+      "word": "BITTERLY"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.5994,
+      "word": "BULLYING"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4588,
+      "word": "FALSIFY"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3612,
+      "word": "GULLIBLE"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3818,
+      "word": "INHIBIT"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3612,
+      "word": "MISCHIEF"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.5859,
+      "word": "REPULSE"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.1779,
+      "word": "TIMIDLY"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.34,
+      "word": "UNEASILY"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.25,
+      "word": "UNSURE"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.5994,
+      "word": "VIOLENT"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4215,
+      "word": "WEAKEN"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "ACTUALLY"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "EVENNESS"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "GUNBOAT"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "HEREIN"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "INCHED"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "ISTHMI"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "LISSOM"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "MOONLIT"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "PIEBALD"
+    },
+    {
+      "length": 7,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "PREPOSE"
+    },
+    {
+      "length": 6,
+      "lengthBand": "medium",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "RELATE"
+    },
+    {
+      "length": 8,
+      "lengthBand": "medium",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "SUPINELY"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5267,
+      "word": "AFFECTION"
+    },
+    {
+      "length": 12,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5574,
+      "word": "APPRECIATIVE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.1779,
+      "word": "BLAMELESS"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5719,
+      "word": "CELEBRATE"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4404,
+      "word": "EFFECTIVELY"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.6124,
+      "word": "ENRAPTURE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.2023,
+      "word": "IMPORTANT"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4404,
+      "word": "INVIGORATE"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4767,
+      "word": "PLEASANTLY"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.5267,
+      "word": "POSITIVELY"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.2732,
+      "word": "SUPPORTER"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "positive",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": 0.4404,
+      "word": "SUPPORTING"
+    },
+    {
+      "length": 12,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4939,
+      "word": "DESPAIRINGLY"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.25,
+      "word": "FATALISTIC"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4215,
+      "word": "FOOLISHLY"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4215,
+      "word": "INDIGNANT"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4404,
+      "word": "INSINCERELY"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4767,
+      "word": "LUGUBRIOUS"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4404,
+      "word": "RESENTMENT"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.3182,
+      "word": "STEREOTYPE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.4767,
+      "word": "SUFFERING"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.2732,
+      "word": "TRIVIALIZE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.296,
+      "word": "UNDERMINE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "negative",
+      "sourceDataset": "opinion-lexicon+vader-confirmed",
+      "vaderCompound": -0.5423,
+      "word": "VICTIMIZE"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "MACADAMIZE"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "OVERJEALOUS"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "PERSONALLY"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "PUTREFIABLE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "REFLECTOR"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "REMONSTRATE"
+    },
+    {
+      "length": 9,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "SAILCLOTH"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "SEDUCTIVELY"
+    },
+    {
+      "length": 12,
+      "lengthBand": "long",
+      "partOfSpeech": "noun",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "SYNCHROFLASH"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "verb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "TABULARIZE"
+    },
+    {
+      "length": 10,
+      "lengthBand": "long",
+      "partOfSpeech": "adjective",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "UNLITERARY"
+    },
+    {
+      "length": 11,
+      "lengthBand": "long",
+      "partOfSpeech": "adverb",
+      "polarity": "neutral",
+      "sourceDataset": "words+wordnet+vader",
+      "vaderCompound": 0.0,
+      "word": "VOLUNTARILY"
+    }
+  ],
+  "interpretationBoundary": "Sentiment labels are sampling metadata only. Do not assume positive words sound consonant, major, pleasant, or high-pitched, or that negative words sound dissonant, minor, or low-pitched.",
+  "orthographicChallengeSet": [
+    {
+      "category": "repeated-letters",
+      "word": "FOOTWALL"
+    },
+    {
+      "category": "repeated-letters",
+      "word": "PENNYWEIGHT"
+    },
+    {
+      "category": "repeated-letters",
+      "word": "WINTERGREEN"
+    },
+    {
+      "category": "rare-letters",
+      "word": "ANATOXIN"
+    },
+    {
+      "category": "rare-letters",
+      "word": "QUADRILLION"
+    },
+    {
+      "category": "rare-letters",
+      "word": "UNREALIZED"
+    },
+    {
+      "category": "vowel-heavy",
+      "word": "CORONATE"
+    },
+    {
+      "category": "vowel-heavy",
+      "word": "EUPHEMIZE"
+    },
+    {
+      "category": "vowel-heavy",
+      "word": "SEEKER"
+    },
+    {
+      "category": "consonant-heavy",
+      "word": "CHOMP"
+    },
+    {
+      "category": "consonant-heavy",
+      "word": "PIGGY"
+    },
+    {
+      "category": "consonant-heavy",
+      "word": "SLUGGISHLY"
+    }
+  ],
+  "provenance": {
+    "input_data_sha256": "cc18455ec841337fef66382e0dcbbe204c24bf0c0cf9994708d8b4ec3aeda7b6",
+    "normalization_committed_blob_sha": "6f1fb75df014d1da43d9412c6c0db0fbb5a3e455",
+    "normalization_implementation": "python/lape26/normalize.py",
+    "normalization_live_sha256": "9283c3cb1286d1c80d566948422d0ae7a8d6c66ed69b7b52794ba2c9f89d06d5",
+    "normalization_profile_id": "lape-text-normalization-v0.1",
+    "normalization_spec_path": "specs/text-normalization.md",
+    "normalization_status": "provisional-frozen",
+    "pipeline_source_commit": "632065ba3d6f8ceb3df4c05bb656982e50afc65b",
+    "source_tree_digest": "22214d445f9224eca4cac7ed97283f8b7256c7218c0e39db784aea568c0de718",
+    "working_tree_dirty": false
+  },
+  "representativenessBoundary": "This is a controlled evaluation set, not a natural-language frequency sample. It must not be described as representative of English without reliable usage-frequency balancing.",
+  "seed": 26
+}

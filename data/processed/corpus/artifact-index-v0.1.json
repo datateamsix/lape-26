@@ -1,0 +1,95 @@
+{
+  "artifactIndexVersion": "artifact-index-v0.1",
+  "artifacts": [
+    {
+      "artifactId": "baseline-comparison-v0.1-json",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "d2dcd06456c21504ef6279771b6a648c32905fcba900237bf96602ef1a8cfd26",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "data/processed/corpus/baseline-comparison-v0.1.json",
+      "seed": 26
+    },
+    {
+      "artifactId": "baseline-comparison-v0.1-md",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "76f1cbad3c4387998a8fc496c8c8396f0c8046a4b76fc0915a4f00dee2fcb066",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "data/processed/corpus/baseline-comparison-v0.1.md",
+      "seed": null
+    },
+    {
+      "artifactId": "circle-of-fifths-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "d17eef4a21831ad7f49d410f22151d68291c83bff79ad13751a3627349fcee0b",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "mappings/controls/circle-of-fifths-v0.1.json",
+      "seed": null
+    },
+    {
+      "artifactId": "corpus-splits-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "fec33b6f7eb8463f30fb5d119bfdf9554bab240b8551d1c3ae7dab1f6aef5785",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "data/processed/corpus/corpus-splits-v0.1.json",
+      "seed": 26
+    },
+    {
+      "artifactId": "corpus-statistics-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "510211aa4de6b5dfed2730822548deefad75a866ce188175a85fac1a0d4fe39d",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "data/processed/corpus/corpus-statistics-v0.1.json",
+      "seed": null
+    },
+    {
+      "artifactId": "frequency-ranked-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "35e2b9bb193dce28e1f37d29a2e884156c7518f012ec4c7f84e3405bdcc68892",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "mappings/controls/frequency-ranked-v0.1.json",
+      "seed": null
+    },
+    {
+      "artifactId": "pilot-stimulus-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "8fcc5badd4275c4445415f19ef7f8e81f047fa77c4b7f6baaa3db742998e889d",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "data/fixtures/pilot-stimulus-v0.1.json",
+      "seed": 26
+    },
+    {
+      "artifactId": "random-seed-026-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "a78e5946019c5e32fd8a59555a76486f32d9a80b9a2412d2cadbd29ad44dac63",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "mappings/controls/random-seed-026-v0.1.json",
+      "seed": 26
+    },
+    {
+      "artifactId": "sequential-chromatic-v0.1",
+      "artifactVersion": "0.1.0",
+      "contentSha256": "b9bb91f4fa130faa438e7e910c0a3b749e7385b5b252c41c3f0220a4daa66f6e",
+      "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
+      "normalizationProfile": "lape-text-normalization-v0.1",
+      "pipelineVersion": "corpus-pipeline-v0.1",
+      "relativePath": "mappings/controls/sequential-chromatic-v0.1.json",
+      "seed": null
+    }
+  ]
+}
