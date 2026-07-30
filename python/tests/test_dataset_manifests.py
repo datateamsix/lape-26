@@ -55,8 +55,12 @@ class DatasetManifestTests(unittest.TestCase):
         self.assertIn("citation", manifest)
 
     def test_version_fields_do_not_conflate_library_and_resource_version(self) -> None:
-        for path in MANIFESTS_DIR.glob("*.yaml"):
-            manifest = yaml.safe_load(path.read_text(encoding="utf-8"))
+        # Scoped to the 5 approved dataset manifests, not a blind glob of
+        # data/manifests/*.yaml: that directory also holds non-manifest
+        # files (e.g. stimulus-exclusions.yaml, Task 23) with no
+        # "version" field at all.
+        for filename in EXPECTED_MANIFESTS:
+            manifest = yaml.safe_load((MANIFESTS_DIR / filename).read_text(encoding="utf-8"))
             self.assertNotIn("nltk-3.9.1", manifest["version"])
 
 
