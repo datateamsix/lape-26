@@ -20,3 +20,9 @@ excluded_words:
   - BOOGER
   # Legitimate word but describes something horrific; borderline distressing content.
   - GRUESOMENESS
+  # Taxonomic proper noun (Genus Myroxylon, source of Balsam of Peru).
+  - MYROXYLON
+  # Names a form of gender-based hatred/prejudice; sensitive content.
+  - MISOGYNIC
+  # Highly obscure heraldic term, essentially unknown outside heraldry.
+  - AVELLAN
