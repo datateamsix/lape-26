@@ -108,3 +108,13 @@ excluded_words:
   # Highly obscure historical unit of measurement, essentially unknown
   # outside old chemistry texts.
   - CRITH
+  # Taxonomic classification name (reptile clade Diapsida).
+  - DIAPSIDA
+  # Ethnonym (a specific East African ethnic group, Kenya/Tanzania/Uganda).
+  - LUO
+  # Direct violence/weapon connotation.
+  - STAB
+  # Charged sociopolitical/ideological term describing a specific
+  # gender-based social structure; same sensitive-content domain as
+  # the already-excluded MISOGYNIC.
+  - PATRIARCHAL
