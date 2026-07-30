@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/control-mapping.schema.json",
+  "title": "LAPE-26 Control Mapping",
+  "type": "object",
+  "required": [
+    "mappingId", "version", "status", "controlType", "generationMethod",
+    "alphabet", "normalizationProfile", "tuning", "range", "letters", "provenance"
+  ],
+  "$defs": {
+    "provenanceBlock": {
+      "type": "object",
+      "required": [
+        "normalization_profile_id", "normalization_status", "normalization_spec_path",
+        "normalization_implementation", "normalization_live_sha256",
+        "normalization_committed_blob_sha", "pipeline_source_commit", "working_tree_dirty",
+        "source_tree_digest", "input_data_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "normalization_profile_id": { "const": "lape-text-normalization-v0.1" },
+        "normalization_status": { "const": "provisional-frozen" },
+        "normalization_spec_path": { "const": "specs/text-normalization.md" },
+        "normalization_implementation": { "const": "python/lape26/normalize.py" },
+        "normalization_live_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "normalization_committed_blob_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "pipeline_source_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "working_tree_dirty": { "type": "boolean" },
+        "source_tree_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "input_data_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "mappingId": { "type": "string", "minLength": 1 },
+    "version": { "type": "string" },
+    "status": { "enum": ["experimental", "candidate", "stable", "deprecated"] },
+    "controlType": { "enum": ["sequential-chromatic", "frequency-ranked", "circle-of-fifths", "random-seed"] },
+    "generationMethod": { "type": "string", "minLength": 1 },
+    "seed": { "type": ["integer", "null"] },
+    "sourcePartition": { "type": ["string", "null"] },
+    "alphabet": { "const": "ABCDEFGHIJKLMNOPQRSTUVWXYZ" },
+    "normalizationProfile": { "const": "lape-text-normalization-v0.1" },
+    "tuning": {
+      "type": "object",
+      "required": ["system", "referencePitch", "referenceMidi", "referenceFrequencyHz"],
+      "additionalProperties": false,
+      "properties": {
+        "system": { "const": "12-TET" },
+        "referencePitch": { "const": "A4" },
+        "referenceMidi": { "const": 69 },
+        "referenceFrequencyHz": { "const": 440 },
+        "frequencyFormula": { "type": "string" }
+      }
+    },
+    "range": {
+      "type": "object",
+      "required": ["lowestMidi", "highestMidi"],
+      "additionalProperties": false,
+      "properties": {
+        "lowestPitch": { "type": "string" },
+        "lowestMidi": { "type": "integer" },
+        "highestPitch": { "type": "string" },
+        "highestMidi": { "type": "integer" }
+      }
+    },
+    "letters": {
+      "type": "object",
+      "minProperties": 26,
+      "maxProperties": 26,
+      "patternProperties": {
+        "^[A-Z]$": {
+          "type": "object",
+          "required": ["pitch", "midi", "frequencyHz"],
+          "additionalProperties": false,
+          "properties": {
+            "pitch": { "type": "string" },
+            "midi": { "type": "integer", "minimum": 0, "maximum": 127 },
+            "frequencyHz": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": { "$ref": "#/$defs/provenanceBlock" }
+  },
+  "additionalProperties": false
+}

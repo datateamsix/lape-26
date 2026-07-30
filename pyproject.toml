@@ -20,5 +20,8 @@ classifiers = [
 [project.scripts]
 lape26 = "lape26.cli:main"
 
+[project.optional-dependencies]
+research = ["nltk>=3.9,<4", "pyyaml>=6.0,<7", "jsonschema>=4.23,<5"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["python/lape26"]

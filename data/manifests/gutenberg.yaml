@@ -1,0 +1,30 @@
+dataset_id: gutenberg
+name: NLTK Gutenberg Sample Corpus
+version: "nltk_data-unversioned"
+source_url: "https://www.nltk.org/nltk_data/ (package: gutenberg)"
+retrieved_at: "2026-07-29"
+license: "Public Domain (US) — Project Gutenberg texts, bundled by NLTK"
+redistribution_allowed: true
+redistribution_notes: >
+  Public-domain source texts. This project redistributes only derived
+  aggregate statistics, splits, and comparison reports — not full text.
+content_type: natural-text-corpus
+language: en
+locale: general
+checksum_sha256: ""
+role: >
+  Natural text: sentences, word/sentence boundaries, character and bigram
+  transitions. Primary source of natural character/bigram frequency and
+  sentence-length statistics. Source for the frequency-ranked control
+  mapping (train partition only).
+must_not_be_used_for: []
+preparation_steps:
+  - "The NLTK Python library version is pinned independently in requirements-research.txt; nltk_data resources are not independently versioned by NLTK, so 'version' above documents that rather than implying false precision."
+  - "nltk.download('gutenberg') via scripts/setup_corpus.py (make corpus-setup)"
+  - "nltk.corpus.gutenberg.fileids() enumerates the ~18 bundled documents"
+  - "nltk.corpus.gutenberg.raw(fileid) yields raw text per document; sentence splitting uses this project's own deterministic splitter (python/lape26/corpus/nltk_adapter.py), not NLTK's punkt/punkt_tab tokenizer, to avoid depending on a 6th, unreviewed NLTK resource"
+  - "Each word token normalized via lape26.normalize.normalize_text before statistics"
+known_biases:
+  - "19th-century British/American literary English; not representative of contemporary usage"
+  - "Heavily skewed toward a small number of authors (Austen, Shakespeare, Bible, Melville, etc.)"
+  - "Only ~18 documents — Gutenberg-derived splits and frequencies have limited statistical power"

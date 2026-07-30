@@ -1,0 +1,28 @@
+dataset_id: opinion_lexicon
+name: Hu & Liu Opinion Lexicon (via NLTK)
+version: "nltk_data-unversioned"
+source_url: "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html (package: opinion_lexicon, via NLTK)"
+retrieved_at: "2026-07-29"
+license: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+redistribution_allowed: true
+redistribution_notes: >
+  CC BY 4.0 permits redistribution, including commercial use, with
+  attribution. Attribution notice recorded in THIRD_PARTY_NOTICES.md:
+  Copyright (C) 2011 Bing Liu. This project redistributes both the
+  per-item derived stimulus metadata and the license attribution.
+content_type: sentiment-lexicon
+language: en
+locale: general
+checksum_sha256: ""
+role: "Positive/negative candidate word labels for the pilot stimulus fixture, confirmed against VADER scores before acceptance (see nltk_adapter.py's polarity logic)."
+must_not_be_used_for:
+  - "Directly influencing the musical objective or any control mapping"
+  - "Character or bigram frequency statistics"
+preparation_steps:
+  - "The NLTK Python library version is pinned independently in requirements-research.txt; nltk_data resources are not independently versioned by NLTK."
+  - "nltk.download('opinion_lexicon') via scripts/setup_corpus.py (make corpus-setup)"
+  - "nltk.corpus.opinion_lexicon.positive() and .negative() yield the two word lists"
+known_biases:
+  - "Built from product-review text; polarity judgments may not generalize to all registers"
+  - "Binary positive/negative only — no intensity scoring (VADER supplies that)"
+citation: "Minqing Hu and Bing Liu, \"Mining and Summarizing Customer Reviews\", KDD 2004. Copyright (C) 2011 Bing Liu."

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/baseline-comparison.schema.json",
+  "title": "LAPE-26 Baseline Comparison Report",
+  "type": "object",
+  "required": ["reportId", "statement", "metricVersions", "mappingIds", "pipelineVersion", "results", "provenance"],
+  "$defs": {
+    "provenanceBlock": {
+      "type": "object",
+      "required": [
+        "normalization_profile_id", "normalization_status", "normalization_spec_path",
+        "normalization_implementation", "normalization_live_sha256",
+        "normalization_committed_blob_sha", "pipeline_source_commit", "working_tree_dirty",
+        "source_tree_digest", "input_data_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "normalization_profile_id": { "const": "lape-text-normalization-v0.1" },
+        "normalization_status": { "const": "provisional-frozen" },
+        "normalization_spec_path": { "const": "specs/text-normalization.md" },
+        "normalization_implementation": { "const": "python/lape26/normalize.py" },
+        "normalization_live_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "normalization_committed_blob_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "pipeline_source_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "working_tree_dirty": { "type": "boolean" },
+        "source_tree_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "input_data_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  },
+  "properties": {
+    "reportId": { "const": "baseline-comparison-v0.1" },
+    "statement": { "type": "string", "minLength": 1 },
+    "metricVersions": {
+      "type": "object",
+      "required": ["register_center", "pitch_span", "interval_contour", "directional_balance", "repetition_index"],
+      "additionalProperties": false,
+      "properties": {
+        "register_center": { "const": "register_center_v0.1" },
+        "pitch_span": { "const": "pitch_span_v0.1" },
+        "interval_contour": { "const": "interval_contour_v0.1" },
+        "directional_balance": { "const": "directional_balance_v0.1" },
+        "repetition_index": { "const": "repetition_index_v0.1" }
+      }
+    },
+    "mappingIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "pipelineVersion": { "const": "corpus-pipeline-v0.1" },
+    "results": { "type": "object" },
+    "provenance": { "$ref": "#/$defs/provenanceBlock" }
+  },
+  "additionalProperties": false
+}

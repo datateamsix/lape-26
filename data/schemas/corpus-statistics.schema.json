@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/corpus-statistics.schema.json",
+  "title": "LAPE-26 Corpus Statistics",
+  "type": "object",
+  "required": [
+    "artifactId", "artifactVersion", "characterFrequency", "withinWordBigrams",
+    "crossWordBoundaryBigrams", "wordInitialLetters", "wordFinalLetters",
+    "sentenceInitialLetters", "sentenceFinalLetters", "wordLengthStats",
+    "sentenceLengthStats", "wordCount", "sentenceCount", "provenance"
+  ],
+  "$defs": {
+    "letterCountMap": {
+      "type": "object",
+      "patternProperties": { "^[A-Z]$": { "type": "integer", "minimum": 0 } },
+      "additionalProperties": false
+    },
+    "bigramCountMap": {
+      "type": "object",
+      "patternProperties": { "^[A-Z]{2}$": { "type": "integer", "minimum": 0 } },
+      "additionalProperties": false
+    },
+    "lengthStats": {
+      "type": "object",
+      "required": ["min", "max", "mean", "median"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "number" }, "max": { "type": "number" },
+        "mean": { "type": "number" }, "median": { "type": "number" }
+      }
+    },
+    "provenanceBlock": {
+      "type": "object",
+      "required": [
+        "normalization_profile_id", "normalization_status", "normalization_spec_path",
+        "normalization_implementation", "normalization_live_sha256",
+        "normalization_committed_blob_sha", "pipeline_source_commit", "working_tree_dirty",
+        "source_tree_digest", "input_data_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "normalization_profile_id": { "const": "lape-text-normalization-v0.1" },
+        "normalization_status": { "const": "provisional-frozen" },
+        "normalization_spec_path": { "const": "specs/text-normalization.md" },
+        "normalization_implementation": { "const": "python/lape26/normalize.py" },
+        "normalization_live_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "normalization_committed_blob_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "pipeline_source_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "working_tree_dirty": { "type": "boolean" },
+        "source_tree_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "input_data_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  },
+  "properties": {
+    "artifactId": { "const": "corpus-statistics-v0.1" },
+    "artifactVersion": { "type": "string" },
+    "characterFrequency": { "$ref": "#/$defs/letterCountMap" },
+    "withinWordBigrams": { "$ref": "#/$defs/bigramCountMap" },
+    "crossWordBoundaryBigrams": { "$ref": "#/$defs/bigramCountMap" },
+    "wordInitialLetters": { "$ref": "#/$defs/letterCountMap" },
+    "wordFinalLetters": { "$ref": "#/$defs/letterCountMap" },
+    "sentenceInitialLetters": { "$ref": "#/$defs/letterCountMap" },
+    "sentenceFinalLetters": { "$ref": "#/$defs/letterCountMap" },
+    "wordLengthStats": { "$ref": "#/$defs/lengthStats" },
+    "sentenceLengthStats": { "$ref": "#/$defs/lengthStats" },
+    "wordCount": { "type": "integer", "minimum": 0 },
+    "sentenceCount": { "type": "integer", "minimum": 0 },
+    "provenance": { "$ref": "#/$defs/provenanceBlock" }
+  },
+  "additionalProperties": false
+}

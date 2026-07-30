@@ -37,3 +37,8 @@ apps/listener-study/exports/
 .env
 .env.*
 !.env.example
+
+# Corpus pipeline (research)
+data/raw/nltk_data/
+data/processed/.tmp/
+data/processed/.check/

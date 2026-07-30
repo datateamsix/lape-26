@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Install research dependencies
+        run: pip3 install -r requirements-research.txt
+
       - name: Validate mapping
         run: python3 scripts/validate_mapping.py
 
@@ -38,3 +41,6 @@ jobs:
 
       - name: Check Python/TypeScript parity
         run: node --experimental-strip-types scripts/check_cross_runtime.ts
+
+      - name: Check corpus provenance and schema integrity
+        run: python3 scripts/check_corpus_provenance.py

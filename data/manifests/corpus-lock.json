@@ -1,0 +1,44 @@
+{
+  "packages": [
+    {
+      "archive_sha256": null,
+      "installed_tree_sha256": "ea8869a181fa3e066517ebe3154796ae97f57322763f45b462524ba88159826a",
+      "package_id": "gutenberg",
+      "resource_path": "corpora\\gutenberg",
+      "retrieved_at": "2026-07-30",
+      "source_version": "documented-or-unknown"
+    },
+    {
+      "archive_sha256": null,
+      "installed_tree_sha256": "da84309502a410c108cc8d05df4a6b2532df9abb7fc5d78d0b84bd48afb6136c",
+      "package_id": "words",
+      "resource_path": "corpora\\words",
+      "retrieved_at": "2026-07-30",
+      "source_version": "documented-or-unknown"
+    },
+    {
+      "archive_sha256": "cbda5ea6eef7f36a97a43d4a75f85e07fccbb4f23657d27b4ccbc93e2646ab59",
+      "installed_tree_sha256": "cbda5ea6eef7f36a97a43d4a75f85e07fccbb4f23657d27b4ccbc93e2646ab59",
+      "package_id": "wordnet",
+      "resource_path": "corpora\\wordnet.zip",
+      "retrieved_at": "2026-07-30",
+      "source_version": "documented-or-unknown"
+    },
+    {
+      "archive_sha256": null,
+      "installed_tree_sha256": "753896f4bf4368c1204b3c58225f5e7d8cf12fac6afc40230000178ab47c0a64",
+      "package_id": "opinion_lexicon",
+      "resource_path": "corpora\\opinion_lexicon",
+      "retrieved_at": "2026-07-30",
+      "source_version": "documented-or-unknown"
+    },
+    {
+      "archive_sha256": "8adba4294eef3964d820bf655e37e61bdc3a341994356af59b74fb3b4a36ce5c",
+      "installed_tree_sha256": "8adba4294eef3964d820bf655e37e61bdc3a341994356af59b74fb3b4a36ce5c",
+      "package_id": "vader_lexicon",
+      "resource_path": "sentiment\\vader_lexicon.zip",
+      "retrieved_at": "2026-07-30",
+      "source_version": "documented-or-unknown"
+    }
+  ]
+}

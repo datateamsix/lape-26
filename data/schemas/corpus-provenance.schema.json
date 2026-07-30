@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/corpus-provenance.schema.json",
+  "title": "LAPE-26 Corpus Provenance Block",
+  "type": "object",
+  "required": [
+    "normalization_profile_id", "normalization_status", "normalization_spec_path",
+    "normalization_implementation", "normalization_live_sha256",
+    "normalization_committed_blob_sha", "pipeline_source_commit", "working_tree_dirty",
+    "source_tree_digest", "input_data_sha256"
+  ],
+  "properties": {
+    "normalization_profile_id": { "const": "lape-text-normalization-v0.1" },
+    "normalization_status": { "const": "provisional-frozen" },
+    "normalization_spec_path": { "const": "specs/text-normalization.md" },
+    "normalization_implementation": { "const": "python/lape26/normalize.py" },
+    "normalization_live_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "normalization_committed_blob_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "pipeline_source_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "working_tree_dirty": { "type": "boolean" },
+    "source_tree_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "input_data_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "additionalProperties": false
+}

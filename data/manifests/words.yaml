@@ -1,0 +1,29 @@
+dataset_id: words
+name: NLTK Words Corpus
+version: "nltk_data-unversioned"
+source_url: "https://www.nltk.org/nltk_data/ (package: words)"
+retrieved_at: "2026-07-29"
+license: "Public Domain / unrestricted word list (derived from Unix words file)"
+redistribution_allowed: true
+redistribution_notes: >
+  Unrestricted word list; only the 80/10/10 split assignment and the
+  120-item stimulus fixture's selected words are redistributed, not the
+  full list.
+content_type: word-list
+language: en
+locale: general
+checksum_sha256: ""
+role: >
+  Candidate vocabulary and orthographic stress cases (repeated/rare
+  letters, vowel/consonant-heavy words) for the pilot stimulus fixture.
+  Source for the word-list 80/10/10 train/validation/holdout split.
+must_not_be_used_for:
+  - "Natural usage-frequency statistics (use Gutenberg instead)"
+preparation_steps:
+  - "The NLTK Python library version is pinned independently in requirements-research.txt; nltk_data resources are not independently versioned by NLTK."
+  - "nltk.download('words') via scripts/setup_corpus.py (make corpus-setup)"
+  - "nltk.corpus.words.words() yields the flat word list"
+  - "Deduplicated and normalized via lape26.normalize.normalize_text"
+known_biases:
+  - "Includes many obscure/archaic entries; not frequency-weighted"
+  - "No part-of-speech or usage information — used only for candidate generation"

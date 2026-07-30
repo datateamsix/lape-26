@@ -1,0 +1,187 @@
+# Words to exclude from pilot stimulus candidate generation, keyed by
+# manual review (Task 23). Populate only after finding a real problem in
+# a generated fixture — do not pre-populate speculatively.
+excluded_words:
+  # Clinical term for a paraphilic disorder; inappropriate stimulus content.
+  - PEDOPHILIA
+  # Proper noun (mythological figure / constellation name).
+  - PEGASUS
+  # Taxonomic proper noun (Class Reptilia).
+  - REPTILIA
+  # Taxonomic proper noun (Family Triopidae, tadpole shrimp).
+  - TRIOPIDAE
+  # Taxonomic proper noun (Genus Elsholtzia, mint-family plant).
+  - ELSHOLTZIA
+  # Proper noun (biblical crucifixion site).
+  - GOLGOTHA
+  # Taxonomic proper noun (Genus Crassula, jade plant family).
+  - CRASSULA
+  # Informal/crude slang register.
+  - BOOGER
+  # Legitimate word but describes something horrific; borderline distressing content.
+  - GRUESOMENESS
+  # Taxonomic proper noun (Genus Myroxylon, source of Balsam of Peru).
+  - MYROXYLON
+  # Names a form of gender-based hatred/prejudice; sensitive content.
+  - MISOGYNIC
+  # Highly obscure heraldic term, essentially unknown outside heraldry.
+  - AVELLAN
+  # Direct violence/weapon connotation ("to bayonet" = stab with a bayonet).
+  - BAYONETED
+  # Proper-noun-derived adjective (from composer Richard Wagner).
+  - WAGNERIAN
+  # Close morphological variant of SUPPORTER (same root, same cell); keeping
+  # the base agentive noun and excluding the derived gerund/participle form.
+  - SUPPORTING
+  # Ethnic slur (derogatory term for Japanese people).
+  - JAP
+  # Taxonomic proper noun (Family Erethizontidae, New World porcupines).
+  - ERETHIZONTIDAE
+  # Taxonomic proper noun (Genus Syzygium, includes cloves).
+  - SYZYGIUM
+  # Names a historically atrocity-associated ideology (forced sterilization,
+  # genocide, Nazi doctrine); inappropriate stimulus content.
+  - EUGENIC
+  # Dominant contemporary association with sexual assault, despite the
+  # literal dictionary meaning ("feeling about uncertainly").
+  - GROPINGLY
+  # Alternate spelling of "pygmy"; carries ethnic/historical baggage as
+  # both an ethnonym and a diminutive/derogatory term.
+  - PIGMY
+  # History as a gendered pejorative ("nagging woman"), alongside its
+  # literal animal-name sense.
+  - SHREW
+  # Violent/weapon-adjacent connotation.
+  - SLASHING
+  # Proper-noun-adjacent (references Freemasonry).
+  - MASONIC
+  # Tied to a specific historical/organizational context (Greek unity /
+  # US Greek-life system).
+  - PANHELLENIC
+  # Ambiguous with a taxonomic genus name (skunks); excluded for caution.
+  - MEPHITIS
+  # Historical clinical-term origin (used to classify intellectual
+  # disability); excluded for caution despite common informal usage.
+  - IDIOTIC
+  # Proper noun (capital city of Canada's Northwest Territories).
+  - YELLOWKNIFE
+  # Taxonomic proper noun (Genus Periploca, silkvine).
+  - PERIPLOCA
+  # Abbreviation/acronym ("First In, First Out"), not an organic word.
+  - FIFO
+  # Names a Native American language family (Kiowa-Tanoan, Pueblo peoples);
+  # proper-noun-adjacent, tied to a specific indigenous identity.
+  - TANOAN
+  # Violent/graphic connotation.
+  - BLOODY
+  # Close morphological/semantic variant of JOYOUSLY (same "joy" root);
+  # keeping JOYOUSLY, excluding JOYFULLY.
+  - JOYFULLY
+  # Highly obscure formal/Latin-derived word, essentially unknown outside
+  # specialist usage.
+  - UXORIAL
+  # Mythological/legendary proper noun (the magic horse of Carolingian
+  # romance) and a famous historical knight's name.
+  - BAYARD
+  # Proper-noun-derived adjective (from the Sadducees, a specific
+  # historical religious/political sect).
+  - SADDUCEAN
+  # Taxonomic-family-derived term (Asclepiadaceae, milkweed family).
+  - ASCLEPIADACEOUS
+  # Describes graphic bodily violence.
+  - DISMEMBER
+  # Close morphological/semantic variant of POISONOUS (same root); keeping
+  # POISONOUS, excluding POISONOUSLY.
+  - POISONOUSLY
+  # Proper noun (US state name).
+  - ARIZONA
+  # Taxonomic proper noun itself (Family Equisetaceae, horsetail plants).
+  - EQUISETACEAE
+  # Proper-noun/ethnonym-derived adjective (Livonia, a historical Baltic
+  # region, and/or the Livonian people).
+  - LIVONIAN
+  # Overwhelmingly recognized as a common surname (Murphy's Law).
+  - MURPHY
+  # Close morphological/semantic variant of APPRECIATE (same root); keeping
+  # APPRECIATE, excluding APPRECIATIVE.
+  - APPRECIATIVE
+  # Highly obscure historical unit of measurement, essentially unknown
+  # outside old chemistry texts.
+  - CRITH
+  # Taxonomic classification name (reptile clade Diapsida).
+  - DIAPSIDA
+  # Ethnonym (a specific East African ethnic group, Kenya/Tanzania/Uganda).
+  - LUO
+  # Direct violence/weapon connotation.
+  - STAB
+  # Charged sociopolitical/ideological term describing a specific
+  # gender-based social structure; same sensitive-content domain as
+  # the already-excluded MISOGYNIC.
+  - PATRIARCHAL
+  # Refers specifically to the Jewish ritual circumcision ceremony; a
+  # culturally/religiously specific term tied to a sensitive
+  # religious/medical practice.
+  - BRISS
+  # Historically and often still used as a pejorative criticizing men's
+  # gender expression; same charged-content domain as MISOGYNIC/PATRIARCHAL.
+  - EFFEMINATE
+  # Taxonomic-genus-derived term (Bacteroides).
+  - BACTEROIDAL
+  # Proper noun (major city with religious/geopolitical significance).
+  - JERUSALEM
+  # Proper noun (common surname).
+  - REID
+  # Ethnonym (Native American language family/people, Oregon).
+  - KALAPOOIAN
+  # Taxonomic classification name (tetrapod clade Amniota).
+  - AMNIOTA
+  # Place-name/proper-noun-adjacent (multiple place associations).
+  - LAKELAND
+  # Carries substantial real-world personal/medical weight (serious,
+  # often fatal disease); potentially distressing as a generic stimulus
+  # word regardless of its standing as ordinary vocabulary.
+  - CANCER
+  # Explicit sexual-act term; inappropriate stimulus content.
+  - CUNNILINCTUS
+  # Proper noun (major European river); slipped through the automated
+  # proper-noun filter (rivers are not always tagged noun.location in
+  # WordNet the way cities/states are) — known filter gap, caught by
+  # manual review.
+  - DANUBE
+  # Proper-noun-derived adjective (from the Elysian Fields of Greek
+  # mythology); missed alongside WOKE in round 14's review, same
+  # category already excluded for WAGNERIAN/SADDUCEAN/LIVONIAN.
+  - ELYSIAN
+  # Direct violence/death term.
+  - KILL
+  # Unambiguous common personal name (given name).
+  - ANNA
+  # Charged term most commonly invoked in concerning contexts (e.g.
+  # sexualization of minors); similar severity register to
+  # PEDOPHILIA/GROPINGLY.
+  - SEXUALIZE
+  # Proper-noun-adjacent (derived from "Pope," a specific religious
+  # office), same institutional-specificity category as
+  # MASONIC/PANHELLENIC.
+  - PAPAL
+  # Direct sexual-abuse connotation, same severe category as
+  # PEDOPHILIA/GROPINGLY.
+  - MOLEST
+  - MOLESTATION
+  # Explicit anatomical/medical term, same category as CUNNILINCTUS.
+  - MICROPHALLUS
+  # Common personal name (given name), same category as ANNA/REID/MURPHY.
+  - ANGELIQUE
+  # Taxonomic genus name (flowering plant); filter gap similar to DANUBE.
+  - CHAENACTIS
+  # Explicit sexual/legal term with significant historical baggage, same
+  # severity category as CUNNILINCTUS/MICROPHALLUS.
+  - SODOMY
+  # Taxonomic genus name (flowering shrub); another filter gap.
+  - CARAGANA
+  # Direct violence/death connotation, same category as
+  # KILL/STAB/DISMEMBER/BAYONETED.
+  - MURDEROUS
+  # Historical ethnonym/civilization-derived adjective (ancient
+  # Carthage), same category as SADDUCEAN/TANOAN/LIVONIAN.
+  - PUNIC

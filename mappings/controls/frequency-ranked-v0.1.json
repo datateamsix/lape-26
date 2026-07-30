@@ -1,0 +1,169 @@
+{
+  "$schema": "../../data/schemas/control-mapping.schema.json",
+  "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "controlType": "frequency-ranked",
+  "generationMethod": "gutenberg-train-character-frequency-nearest-register-center",
+  "letters": {
+    "A": {
+      "frequencyHz": 246.941651,
+      "midi": 59,
+      "pitch": "B3"
+    },
+    "B": {
+      "frequencyHz": 155.563492,
+      "midi": 51,
+      "pitch": "D#3"
+    },
+    "C": {
+      "frequencyHz": 415.304698,
+      "midi": 68,
+      "pitch": "G#4"
+    },
+    "D": {
+      "frequencyHz": 349.228231,
+      "midi": 65,
+      "pitch": "F4"
+    },
+    "E": {
+      "frequencyHz": 261.625565,
+      "midi": 60,
+      "pitch": "C4"
+    },
+    "F": {
+      "frequencyHz": 391.995436,
+      "midi": 67,
+      "pitch": "G4"
+    },
+    "G": {
+      "frequencyHz": 440.0,
+      "midi": 69,
+      "pitch": "A4"
+    },
+    "H": {
+      "frequencyHz": 293.664768,
+      "midi": 62,
+      "pitch": "D4"
+    },
+    "I": {
+      "frequencyHz": 220.0,
+      "midi": 57,
+      "pitch": "A3"
+    },
+    "J": {
+      "frequencyHz": 138.591315,
+      "midi": 49,
+      "pitch": "C#3"
+    },
+    "K": {
+      "frequencyHz": 493.883301,
+      "midi": 71,
+      "pitch": "B4"
+    },
+    "L": {
+      "frequencyHz": 195.997718,
+      "midi": 55,
+      "pitch": "G3"
+    },
+    "M": {
+      "frequencyHz": 184.997211,
+      "midi": 54,
+      "pitch": "F#3"
+    },
+    "N": {
+      "frequencyHz": 311.126984,
+      "midi": 63,
+      "pitch": "D#4"
+    },
+    "O": {
+      "frequencyHz": 233.081881,
+      "midi": 58,
+      "pitch": "A#3"
+    },
+    "P": {
+      "frequencyHz": 466.163762,
+      "midi": 70,
+      "pitch": "A#4"
+    },
+    "Q": {
+      "frequencyHz": 130.812783,
+      "midi": 48,
+      "pitch": "C3"
+    },
+    "R": {
+      "frequencyHz": 207.652349,
+      "midi": 56,
+      "pitch": "G#3"
+    },
+    "S": {
+      "frequencyHz": 329.627557,
+      "midi": 64,
+      "pitch": "E4"
+    },
+    "T": {
+      "frequencyHz": 277.182631,
+      "midi": 61,
+      "pitch": "C#4"
+    },
+    "U": {
+      "frequencyHz": 369.994423,
+      "midi": 66,
+      "pitch": "F#4"
+    },
+    "V": {
+      "frequencyHz": 146.832384,
+      "midi": 50,
+      "pitch": "D3"
+    },
+    "W": {
+      "frequencyHz": 174.614116,
+      "midi": 53,
+      "pitch": "F3"
+    },
+    "X": {
+      "frequencyHz": 523.251131,
+      "midi": 72,
+      "pitch": "C5"
+    },
+    "Y": {
+      "frequencyHz": 164.813778,
+      "midi": 52,
+      "pitch": "E3"
+    },
+    "Z": {
+      "frequencyHz": 554.365262,
+      "midi": 73,
+      "pitch": "C#5"
+    }
+  },
+  "mappingId": "frequency-ranked-v0.1",
+  "normalizationProfile": "lape-text-normalization-v0.1",
+  "provenance": {
+    "input_data_sha256": "795ac2bd3e8b3c841c3c83a7ee6612534cc32d3ea486cec67a6bb0b275055996",
+    "normalization_committed_blob_sha": "6f1fb75df014d1da43d9412c6c0db0fbb5a3e455",
+    "normalization_implementation": "python/lape26/normalize.py",
+    "normalization_live_sha256": "9283c3cb1286d1c80d566948422d0ae7a8d6c66ed69b7b52794ba2c9f89d06d5",
+    "normalization_profile_id": "lape-text-normalization-v0.1",
+    "normalization_spec_path": "specs/text-normalization.md",
+    "normalization_status": "provisional-frozen",
+    "pipeline_source_commit": "28bfc76aa42fd5c9eda881f9d2665b6e4bb1a526",
+    "source_tree_digest": "71f3ff3c879d0e04787fa46ada54776fe41da75bec1e08c160846dc83f6a57aa",
+    "working_tree_dirty": false
+  },
+  "range": {
+    "highestMidi": 73,
+    "highestPitch": "C#5",
+    "lowestMidi": 48,
+    "lowestPitch": "C3"
+  },
+  "seed": null,
+  "sourcePartition": "gutenberg-train",
+  "status": "experimental",
+  "tuning": {
+    "frequencyFormula": "f(m)=440*2^((m-69)/12)",
+    "referenceFrequencyHz": 440.0,
+    "referenceMidi": 69,
+    "referencePitch": "A4",
+    "system": "12-TET"
+  },
+  "version": "0.1.0-experimental"
+}

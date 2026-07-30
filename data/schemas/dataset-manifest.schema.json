@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lape26.org/schemas/dataset-manifest.schema.json",
+  "title": "LAPE-26 Dataset Manifest",
+  "type": "object",
+  "required": [
+    "dataset_id", "name", "version", "source_url", "retrieved_at",
+    "license", "redistribution_allowed", "content_type", "language",
+    "locale", "checksum_sha256", "role", "preparation_steps", "known_biases"
+  ],
+  "properties": {
+    "dataset_id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "version": { "type": "string" },
+    "source_url": { "type": "string" },
+    "retrieved_at": { "type": "string", "format": "date" },
+    "license": { "type": "string" },
+    "redistribution_allowed": { "type": "boolean" },
+    "redistribution_notes": { "type": "string" },
+    "content_type": { "type": "string" },
+    "language": { "type": "string" },
+    "locale": { "type": "string" },
+    "checksum_sha256": { "type": "string" },
+    "role": { "type": "string", "minLength": 1 },
+    "must_not_be_used_for": { "type": "array", "items": { "type": "string" } },
+    "preparation_steps": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "known_biases": { "type": "array", "items": { "type": "string" } },
+    "citation": { "type": "string" }
+  },
+  "additionalProperties": false
+}
