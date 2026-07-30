@@ -33,3 +33,33 @@ excluded_words:
   # Close morphological variant of SUPPORTER (same root, same cell); keeping
   # the base agentive noun and excluding the derived gerund/participle form.
   - SUPPORTING
+  # Ethnic slur (derogatory term for Japanese people).
+  - JAP
+  # Taxonomic proper noun (Family Erethizontidae, New World porcupines).
+  - ERETHIZONTIDAE
+  # Taxonomic proper noun (Genus Syzygium, includes cloves).
+  - SYZYGIUM
+  # Names a historically atrocity-associated ideology (forced sterilization,
+  # genocide, Nazi doctrine); inappropriate stimulus content.
+  - EUGENIC
+  # Dominant contemporary association with sexual assault, despite the
+  # literal dictionary meaning ("feeling about uncertainly").
+  - GROPINGLY
+  # Alternate spelling of "pygmy"; carries ethnic/historical baggage as
+  # both an ethnonym and a diminutive/derogatory term.
+  - PIGMY
+  # History as a gendered pejorative ("nagging woman"), alongside its
+  # literal animal-name sense.
+  - SHREW
+  # Violent/weapon-adjacent connotation.
+  - SLASHING
+  # Proper-noun-adjacent (references Freemasonry).
+  - MASONIC
+  # Tied to a specific historical/organizational context (Greek unity /
+  # US Greek-life system).
+  - PANHELLENIC
+  # Ambiguous with a taxonomic genus name (skunks); excluded for caution.
+  - MEPHITIS
+  # Historical clinical-term origin (used to classify intellectual
+  # disability); excluded for caution despite common informal usage.
+  - IDIOTIC
