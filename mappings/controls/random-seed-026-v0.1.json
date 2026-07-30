@@ -138,14 +138,14 @@
   "mappingId": "random-seed-026-v0.1",
   "normalizationProfile": "lape-text-normalization-v0.1",
   "provenance": {
-    "input_data_sha256": "915211ba8768d150d8a6df93af7b9b39c200c6b3c30cb55924a9908d87a2811f",
+    "input_data_sha256": "795ac2bd3e8b3c841c3c83a7ee6612534cc32d3ea486cec67a6bb0b275055996",
     "normalization_committed_blob_sha": "6f1fb75df014d1da43d9412c6c0db0fbb5a3e455",
     "normalization_implementation": "python/lape26/normalize.py",
     "normalization_live_sha256": "9283c3cb1286d1c80d566948422d0ae7a8d6c66ed69b7b52794ba2c9f89d06d5",
     "normalization_profile_id": "lape-text-normalization-v0.1",
     "normalization_spec_path": "specs/text-normalization.md",
     "normalization_status": "provisional-frozen",
-    "pipeline_source_commit": "f15d789d85e96163e6e1c14d690f6e2280049521",
+    "pipeline_source_commit": "28bfc76aa42fd5c9eda881f9d2665b6e4bb1a526",
     "source_tree_digest": "71f3ff3c879d0e04787fa46ada54776fe41da75bec1e08c160846dc83f6a57aa",
     "working_tree_dirty": false
   },

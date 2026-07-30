@@ -4,7 +4,7 @@
     {
       "artifactId": "baseline-comparison-v0.1-json",
       "artifactVersion": "0.1.0",
-      "contentSha256": "9e45f02f8e1279198a48c873432e3cd87081821b6f28465042ee880809d853e3",
+      "contentSha256": "4dd9fd0019f2c87da1846e3d34f2a90be85a69edf2a12ec0be8746773d340078",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -14,7 +14,7 @@
     {
       "artifactId": "baseline-comparison-v0.1-md",
       "artifactVersion": "0.1.0",
-      "contentSha256": "533c0d2194a1e8ca587ad59a676d2e6ac533a433f8a19841493a2f9dd917fbd1",
+      "contentSha256": "446b795965e053ad8311d43048ae9f106e643fb816f07e895e87278c33b1e652",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -24,7 +24,7 @@
     {
       "artifactId": "circle-of-fifths-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "852a0147973fa3112f24b758992b963dcb8b17d53d5cf7d6d3bb450412ea7c8a",
+      "contentSha256": "50a61e89505e6cca75c356eb2aff636f3d8b3540b177c078b3bbbea0a05f5162",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -34,7 +34,7 @@
     {
       "artifactId": "corpus-splits-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "2b3aaa2c82122156b55606a77a3fc54c9efe0f995cd36e23d7355cf773a075d8",
+      "contentSha256": "33cd9a42e976c7ccd80a84405335b6846d7959ed48477dedaa44c66983357dd8",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -44,7 +44,7 @@
     {
       "artifactId": "corpus-statistics-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "6f36d5942e66e04fe5b5ae6259959ff77a8fe2f30919b7df7929e32dc08ce0c5",
+      "contentSha256": "019908b5276b953ec5f5f157c108d302adcdc835d883ebbdabf770b6e0ae196c",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -54,7 +54,7 @@
     {
       "artifactId": "frequency-ranked-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "861754e2ebe89ef033b026642f9a67322b70c5cf55dbd55b428d7bfffd54a0bd",
+      "contentSha256": "4bea39e1c4fad90ba2441a174a7d441ce886e1d53b4c8710b1e4a883d85ad556",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -64,7 +64,7 @@
     {
       "artifactId": "pilot-stimulus-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "f198faa17257bdb0b85e930575e68c29c7e6fb202d0e8aee8acc5eb11d25ae6d",
+      "contentSha256": "346395a8cb368a883cb6ccee50091661c68b16bfe42efb60aa781486c0fe18a9",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -74,7 +74,7 @@
     {
       "artifactId": "random-seed-026-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "4c3797ff73c306f78e0eb343f328d1127ebbe514eab1daae171ea0e2ff2b8dd9",
+      "contentSha256": "05703519c0c3f98ac1e14379f007255e22ca0fc9b44061d15c95c24871bb28e4",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
@@ -84,7 +84,7 @@
     {
       "artifactId": "sequential-chromatic-v0.1",
       "artifactVersion": "0.1.0",
-      "contentSha256": "c33806e10eaf4a70be456272ee52d120ffd4bf335255435b97d0dcf5cb1df82e",
+      "contentSha256": "6bf532548207b57563dd3d28323998576e99120be259f25e082ecc4cdf495bde",
       "corpusLockSha256": "bd20c3d76242412f1ab759d7574e9a7e38241309d7b5ef25cff1f7f77624a6bf",
       "normalizationProfile": "lape-text-normalization-v0.1",
       "pipelineVersion": "corpus-pipeline-v0.1",
