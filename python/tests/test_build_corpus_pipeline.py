@@ -209,6 +209,34 @@ class RunPipelineTests(unittest.TestCase):
             second_hashes = {e["artifactId"]: e["contentSha256"] for e in second_index["artifacts"] if e["artifactId"] != "artifact-index-v0.1"}
             self.assertEqual(first_hashes, second_hashes)
 
+    def test_stimulus_words_are_sourced_only_from_the_training_partition(self) -> None:
+        # Regression guard: run_pipeline's train_word_set filter (which
+        # restricts select_core_set/select_orthographic_challenge_set to
+        # word_split.train before selection) was once silently deleted by
+        # an implementer and had to be restored — see the branch history
+        # for scripts/build_corpus_pipeline.py. No other test in this file
+        # would have caught that regression, since none of them compare
+        # stimulus words against the validation/holdout partitions. This
+        # test fails if that filter is ever removed again.
+        with tempfile.TemporaryDirectory() as tmp:
+            written = _run(Path(tmp))
+            stimulus = json.loads(written["pilot-stimulus-v0.1"].read_text(encoding="utf-8"))
+            splits = json.loads(written["corpus-splits-v0.1"].read_text(encoding="utf-8"))
+
+            stimulus_words = {item["word"] for item in stimulus["coreSet"]}
+            stimulus_words |= {item["word"] for item in stimulus["orthographicChallengeSet"]}
+
+            train_words = set(splits["wordListSplit"]["train"])
+            validation_words = set(splits["wordListSplit"]["validation"])
+            holdout_words = set(splits["wordListSplit"]["holdout"])
+
+            self.assertTrue(
+                stimulus_words.issubset(train_words),
+                f"stimulus words not in train partition: {stimulus_words - train_words}",
+            )
+            self.assertEqual(stimulus_words & validation_words, set())
+            self.assertEqual(stimulus_words & holdout_words, set())
+
     def test_artifact_index_corpus_lock_sha256_matches_real_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             base = Path(tmp)

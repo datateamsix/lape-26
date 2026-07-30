@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -114,12 +115,78 @@ def check_artifact_index(root: Path, errors: list[str]) -> None:
             actual_payload = json.loads(artifact_path.read_text(encoding="utf-8"))
             actual_checksum = semantic_content_sha256(actual_payload)
         else:
-            actual_checksum = None  # non-JSON artifacts (the .md report) use a plain content hash upstream
-        if actual_checksum is not None and entry.get("contentSha256") != actual_checksum:
+            # Non-JSON artifacts (the .md report) are hashed as plain bytes
+            # upstream (build_corpus_pipeline.py's _build_artifact_index),
+            # normalizing CRLF to LF first so the check is independent of
+            # the checkout's line-ending configuration.
+            normalized = artifact_path.read_bytes().replace(b"\r\n", b"\n")
+            actual_checksum = hashlib.sha256(normalized).hexdigest()
+        if entry.get("contentSha256") != actual_checksum:
             errors.append(
                 f"artifact-index checksum mismatch for {relative_path}: "
                 f"recorded {entry.get('contentSha256')}, actual {actual_checksum}"
             )
+
+
+def check_stimulus_integrity(root: Path, errors: list[str]) -> None:
+    """Guards the committed pilot-stimulus fixture against the exact
+    regression class this project has already hit once: the
+    training-partition leakage filter in build_corpus_pipeline.py's
+    run_pipeline was silently deleted by an implementer and had to be
+    restored (see branch history). No schema can express "these words
+    must come from that other artifact's train partition," so this check
+    reads both committed artifacts directly and verifies it by hand.
+    """
+    import yaml
+
+    stimulus_path = root / "data" / "fixtures" / "pilot-stimulus-v0.1.json"
+    splits_path = root / "data" / "processed" / "corpus" / "corpus-splits-v0.1.json"
+    exclusions_path = root / "data" / "manifests" / "stimulus-exclusions.yaml"
+    if not stimulus_path.exists() or not splits_path.exists():
+        return  # already reported as missing by check_schema_validation
+
+    stimulus = json.loads(stimulus_path.read_text(encoding="utf-8"))
+    core_words = [item["word"] for item in stimulus.get("coreSet", [])]
+    orthographic_words = [item["word"] for item in stimulus.get("orthographicChallengeSet", [])]
+    all_words = core_words + orthographic_words
+
+    if len(core_words) != 108:
+        errors.append(f"pilot-stimulus-v0.1.json: expected 108 coreSet words, found {len(core_words)}")
+    if len(orthographic_words) != 12:
+        errors.append(
+            f"pilot-stimulus-v0.1.json: expected 12 orthographicChallengeSet words, found {len(orthographic_words)}"
+        )
+    if len(set(all_words)) != len(all_words):
+        seen: set[str] = set()
+        duplicates = sorted({word for word in all_words if word in seen or seen.add(word)})
+        errors.append(f"pilot-stimulus-v0.1.json: duplicate words across coreSet/orthographicChallengeSet: {duplicates}")
+
+    if exclusions_path.exists():
+        exclusions_data = yaml.safe_load(exclusions_path.read_text(encoding="utf-8")) or {}
+        excluded_words = {str(word).upper() for word in exclusions_data.get("excluded_words", [])}
+        leaked = set(all_words) & excluded_words
+        if leaked:
+            errors.append(f"pilot-stimulus-v0.1.json: contains manually-excluded word(s): {sorted(leaked)}")
+
+    splits = json.loads(splits_path.read_text(encoding="utf-8"))
+    word_split = splits.get("wordListSplit", {})
+    train_words = set(word_split.get("train", []))
+    validation_words = set(word_split.get("validation", []))
+    holdout_words = set(word_split.get("holdout", []))
+
+    stimulus_word_set = set(all_words)
+    not_in_train = stimulus_word_set - train_words
+    if not_in_train:
+        errors.append(
+            f"pilot-stimulus-v0.1.json: word(s) not in corpus-splits-v0.1.json's train partition "
+            f"(leakage-prevention filter may be broken): {sorted(not_in_train)}"
+        )
+    leaked_into_validation = stimulus_word_set & validation_words
+    if leaked_into_validation:
+        errors.append(f"pilot-stimulus-v0.1.json: word(s) leaked into wordlist_validation: {sorted(leaked_into_validation)}")
+    leaked_into_holdout = stimulus_word_set & holdout_words
+    if leaked_into_holdout:
+        errors.append(f"pilot-stimulus-v0.1.json: word(s) leaked into wordlist_holdout: {sorted(leaked_into_holdout)}")
 
 
 def main() -> None:
@@ -128,6 +195,7 @@ def main() -> None:
     check_provenance(ROOT, [ROOT / p for p in PROVENANCE_BEARING_ARTIFACTS], errors)
     check_corpus_lock_structure(ROOT, errors)
     check_artifact_index(ROOT, errors)
+    check_stimulus_integrity(ROOT, errors)
 
     if errors:
         print("check_corpus_provenance found problems:")
