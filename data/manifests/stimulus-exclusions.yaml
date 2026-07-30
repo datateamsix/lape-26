@@ -12,3 +12,11 @@ excluded_words:
   - TRIOPIDAE
   # Taxonomic proper noun (Genus Elsholtzia, mint-family plant).
   - ELSHOLTZIA
+  # Proper noun (biblical crucifixion site).
+  - GOLGOTHA
+  # Taxonomic proper noun (Genus Crassula, jade plant family).
+  - CRASSULA
+  # Informal/crude slang register.
+  - BOOGER
+  # Legitimate word but describes something horrific; borderline distressing content.
+  - GRUESOMENESS
