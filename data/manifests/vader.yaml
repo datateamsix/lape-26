@@ -1,0 +1,24 @@
+dataset_id: vader_lexicon
+name: VADER Sentiment Lexicon (via NLTK)
+version: "nltk_data-unversioned"
+source_url: "https://github.com/cjhutto/vaderSentiment (package: vader_lexicon, via NLTK)"
+retrieved_at: "2026-07-29"
+license: "MIT License"
+redistribution_allowed: true
+redistribution_notes: >
+  MIT-licensed; per-item VADER compound scores for the 120-item stimulus
+  fixture are redistributed freely.
+content_type: sentiment-lexicon
+language: en
+locale: general
+checksum_sha256: ""
+role: "Sentiment scoring and polarity confirmation for pilot stimulus candidates — required to agree with Opinion Lexicon labels, not merely recorded alongside them."
+must_not_be_used_for:
+  - "Directly influencing the musical objective or any control mapping"
+preparation_steps:
+  - "The NLTK Python library version is pinned independently in requirements-research.txt; nltk_data resources are not independently versioned by NLTK."
+  - "nltk.download('vader_lexicon') via scripts/setup_corpus.py (make corpus-setup)"
+  - "nltk.sentiment.SentimentIntensityAnalyzer().polarity_scores(word)['compound'] scores each candidate"
+known_biases:
+  - "Tuned on social-media text; single-word scoring may differ from in-context sentiment"
+citation: "Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. ICWSM-14."

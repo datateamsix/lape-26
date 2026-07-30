@@ -1,0 +1,27 @@
+dataset_id: wordnet
+name: Princeton WordNet (via NLTK)
+version: "nltk_data-unversioned"
+source_url: "https://wordnet.princeton.edu/ (package: wordnet, via NLTK)"
+retrieved_at: "2026-07-29"
+license: "WordNet License (permissive; free for any purpose with copyright/permission notice retained)"
+redistribution_allowed: true
+redistribution_notes: >
+  Only per-item part-of-speech and validation results for the 120-item
+  stimulus fixture are redistributed, not the full WordNet database.
+content_type: lexical-database
+language: en
+locale: general
+checksum_sha256: ""
+role: >
+  Dictionary validation (real-word check), part-of-speech tagging, and
+  morphological-variant grouping (stem key) for stimulus candidates.
+must_not_be_used_for:
+  - "Usage-frequency inference — WordNet membership is not a frequency signal"
+preparation_steps:
+  - "The NLTK Python library version is pinned independently in requirements-research.txt; nltk_data resources are not independently versioned by NLTK."
+  - "nltk.download('wordnet') via scripts/setup_corpus.py (make corpus-setup)"
+  - "nltk.corpus.wordnet.synsets(word) validates real-word membership and yields part-of-speech"
+  - "nltk.corpus.wordnet.morphy(word) yields a lemma used as the morphological stem key"
+known_biases:
+  - "General-purpose lexicon; may lack domain-specific, slang, or very recent vocabulary"
+  - "Multiple senses per word; part-of-speech selection uses the first synset's POS"
