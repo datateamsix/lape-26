@@ -30,3 +30,6 @@ excluded_words:
   - BAYONETED
   # Proper-noun-derived adjective (from composer Richard Wagner).
   - WAGNERIAN
+  # Close morphological variant of SUPPORTER (same root, same cell); keeping
+  # the base agentive noun and excluding the derived gerund/participle form.
+  - SUPPORTING
