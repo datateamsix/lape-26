@@ -12,7 +12,7 @@
 - [x] Include Python and TypeScript reference encoders
 - [x] Include golden test vectors
 - [x] Include mapping validation and CI
-- [ ] Create public GitHub repository
+- [x] Create public GitHub repository
 - [ ] Enable branch protection and required checks
 - [ ] Tag `v0.1.0-experimental`
 
@@ -27,12 +27,27 @@
 
 ## Phase 2 — Evaluation framework
 
-- [ ] Implement sequential chromatic control
-- [ ] Implement frequency-ranked control
-- [ ] Implement circle-of-fifths control
+### Corpus and stimulus foundation
+
+- [x] Add license-aware dataset manifests
+- [x] Add explicit corpus download/setup tooling
+- [x] Normalize approved corpus inputs using the documented LAPE normalization profile
+- [x] Generate character, bigram, boundary, word-length, and sentence-length statistics
+- [x] Create deterministic train, validation, and holdout partitions
+- [x] Generate the versioned 120-item controlled pilot stimulus fixture
+- [x] Record selection seed, source metadata, exclusions, and checksums
+- [x] Add reproducibility tests
+
+### Mapping evaluation and controls
+
+- [x] Implement sequential chromatic control
+- [x] Implement frequency-ranked control
+- [x] Implement circle-of-fifths control
+- [x] Generate one seeded random control (`random-seed-026-v0.1`)
 - [ ] Generate 100 seeded random controls
-- [ ] Add interval, register, tonality, chord, identity, and fatigue reports
-- [ ] Publish first controlled comparison report
+- [x] Add descriptive baseline comparison metrics (register, pitch span, interval, directional balance, repetition index), evaluated against the pilot fixture, Gutenberg validation/holdout, and word-list validation/holdout
+- [ ] Add experimental heuristic comparison metrics (tonality, chord, identity, fatigue, composite) — future Phase 2 metric-design PR
+- [x] Publish first descriptive baseline comparison report
 
 ## Phase 3 — Candidate optimization
 
